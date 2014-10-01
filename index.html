@@ -14,10 +14,11 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h1 class="logo"><a href="">EventsGlue</a></h1>
-          <ul class="list-unstyled">
+          <ul class="header-top-links list-unstyled hide-s">
             <li><a href="">Sign In</a></li>
             <li><a href="" class="eg-btn eg-btn-1">Register</a></li>
           </ul>
+          <span class="trigger-mm show-s" data-toggle="collapse" data-target="#mobile-menu"><span></span></span>
           <div id="search">
             <form action="">
               <input type="text" placeholder="Search for fun...">
@@ -28,7 +29,7 @@
       </div>
     </div>
   </header>
-  <nav id="main-menu">
+  <nav id="main-menu" class="hide-s">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -41,6 +42,34 @@
             <li><a href="">Photographers</a></li>
             <li><a href="">Party Packages</a></li>
             <li><a href="">More</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav id="mobile-menu" class="collapse">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="list-unstyled">
+            <li class="search">
+              <form action="">
+                <input type="text" placeholder="Search for fun...">
+                <button></button>
+              </form>
+            </li>
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Venues</a></li>
+            <li><a href="">DS's</a></li>
+            <li><a href="">Bands</a></li>
+            <li><a href="">Limos / Party Buses</a></li>
+            <li><a href="">Photographers</a></li>
+            <li><a href="">Party Packages</a></li>
+            <li><a href="">More</a></li>
+            <li class="links">
+              <a href="">Sign In</a>
+              <a href="" class="eg-btn eg-btn-1">Register</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -292,7 +321,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div id="featured-carousel" class="carousel slide bordered" data-ride="carousel">
+          <div id="featured-carousel" class="featured-carousel carousel slide bordered hide-s" data-ride="carousel" data-interval="false">
             <div class="shadow"></div>
             <div class="carousel-inner">
               <div class="item active">
@@ -535,6 +564,149 @@
               <li data-target="#featured-carousel" data-slide-to="4"></li>
             </ol>
           </div>
+          <div id="featured-carousel-small" class="featured-carousel carousel slide bordered show-s" data-ride="carousel" data-interval="false">
+            <div class="shadow"></div>
+            <div class="carousel-inner">
+              <div class="item active">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price">$59 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon new"><span>New</span></div>
+                  </li>
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price">$59 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon new"><span>New</span></div>
+                  </li>
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price">$59 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon new"><span>New</span></div>
+                  </li>
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price">$59 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon new"><span>New</span></div>
+                  </li>
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price">$59 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon new"><span>New</span></div>
+                  </li>
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <ol class="carousel-indicators">
+              <li data-target="#featured-carousel-small" data-slide-to="0" class="active"></li>
+              <li data-target="#featured-carousel-small" data-slide-to="1"></li>
+              <li data-target="#featured-carousel-small" data-slide-to="2"></li>
+              <li data-target="#featured-carousel-small" data-slide-to="3"></li>
+              <li data-target="#featured-carousel-small" data-slide-to="4"></li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
@@ -639,14 +811,14 @@
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
             </ul>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled hide-s">
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
             </ul>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled hide-s">
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
