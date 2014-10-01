@@ -27,7 +27,15 @@ module.exports = function(grunt) {
         separator: ';',
       },
       js: {
-        src: ['bower_components/jquery/dist/jquery.js', 'bower_components/jquery-ui/jquery-ui.min.js', 'bower_components/bootstrap/dist/js/bootstrap.js', 'public/js/eventsGlue.js'],
+        src: [
+        'bower_components/jquery/dist/jquery.js',
+        'bower_components/jquery-ui/jquery-ui.min.js',
+        'bower_components/jquery-ui/ui/widget.js',
+        'bower_components/jquery-ui/ui/mouse.js',
+        'public/js/lib/jquery.ui.touch-punch.min.js',
+        'bower_components/bootstrap/dist/js/bootstrap.js',
+        'public/js/eventsGlue.js'
+        ],
         dest: 'public/js/main.js',
       }
     },
@@ -43,7 +51,15 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: [
-        'bower_components/jquery/dist/jquery.js', 'bower_components/jquery-ui/jquery-ui.min.js', 'bower_components/bootstrap/dist/js/bootstrap.js', 'public/js/eventsGlue.js', 'public/js/main.js'],
+        'bower_components/jquery/dist/jquery.js',
+        'bower_components/jquery-ui/jquery-ui.min.js',
+        'bower_components/jquery-ui/ui/widget.js',
+        'bower_components/jquery-ui/ui/mouse.js',
+        'public/js/lib/jquery.ui.touch-punch.min.js',
+        'bower_components/bootstrap/dist/js/bootstrap.js',
+        'public/js/eventsGlue.js',
+        'public/js/main.js'
+        ],
         tasks: ['concat:js', 'uglify:js']
       },
       styles: {
