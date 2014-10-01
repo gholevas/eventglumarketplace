@@ -21,4 +21,34 @@ $(function() {
   $('#calendar-2').datepicker();
   $('#calendar-3').datepicker();
   $('#calendar-4').datepicker();
+
+  var $bgs = $('.bgs');
+
+  function setFooterBackground(bgNumber) {
+    var prev = $bgs.find('.bg');
+
+    setTimeout(function () {
+      prev.remove();
+    }, 4100);
+
+    var el = document.createElement('div');
+    el.className += 'bg bg' + bgNumber;
+
+    $bgs.append(el);
+
+    setTimeout(function () {
+      el.className += ' show';
+    }, 20);
+  }
+
+  function footerBgRotating(interval) {
+    var current = 1;
+
+    setInterval(function () {
+      setFooterBackground((current % 5) + 1);
+      current++;
+    }, interval);
+  };
+
+  footerBgRotating(8000);
 });
