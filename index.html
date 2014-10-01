@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="public/styles/styles.css">
 </head>
 <body class="home-page">
-  <a href="" id="how-it-works-link">HOW IT WORKS</a>
+  <a href="" id="how-it-works-link" class="hide-s hide-xs">HOW IT WORKS</a>
   <header id="header" class="rainbow">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h1 class="logo"><a href="">EventsGlue</a></h1>
-          <ul class="header-top-links list-unstyled hide-s">
+          <ul class="header-top-links list-unstyled hide-s hide-xs">
             <li><a href="">Sign In</a></li>
             <li><a href="" class="eg-btn eg-btn-1">Register</a></li>
           </ul>
-          <span class="trigger-mm show-s" data-toggle="collapse" data-target="#mobile-menu"><span></span></span>
-          <div id="search">
+          <span class="trigger-mm show-s show-xs" data-toggle="collapse" data-target="#mobile-menu"><span></span></span>
+          <div id="search" class="hide-xs">
             <form action="">
               <input type="text" placeholder="Search for fun...">
               <button><span class="glyphicon glyphicon-search"></span></button>
@@ -29,7 +29,7 @@
       </div>
     </div>
   </header>
-  <nav id="main-menu" class="hide-s">
+  <nav id="main-menu" class="hide-s hide-xs">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <ul class="list-unstyled">
-            <li class="search">
+            <li class="search hide-s show-xs">
               <form action="">
                 <input type="text" placeholder="Search for fun...">
                 <button></button>
@@ -83,7 +83,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div id="categories-search-tabs">
-            <ul class="list-unstyled" role="tablist">
+            <ul class="list-unstyled hide-xs" role="tablist">
               <li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><span><i></i></span>Venues</a></li>
               <li><a href="#tab-2" role="tab" data-toggle="tab"><span><i></i></span>DJ's</a></li>
               <li><a href="#tab-3" role="tab" data-toggle="tab"><span><i></i></span>Bands</a></li>
@@ -91,8 +91,11 @@
               <li><a href="#tab-5" role="tab" data-toggle="tab"><span><i></i></span>Packages</a></li>
             </ul>
             <div class="tab-content">
-              <div class="tab-pane active" id="tab-1">
+              <div class="tab-pane active pane-1" id="tab-1">
                 <form action="">
+                  <div class="tab-ttl show-xs">
+                    <span><i></i></span>Venues
+                  </div>
                   <div class="form-set clearfix">
                     <label for="">Where is your party?</label>
                     <input type="text" placeholder="Search for City, State or Zip Code">
@@ -135,8 +138,11 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane" id="tab-2">
+              <div class="tab-pane pane-2" id="tab-2">
                 <form action="">
+                  <div class="tab-ttl show-xs">
+                    <span><i></i></span>DJ's
+                  </div>
                   <div class="form-set clearfix">
                     <label for="">Where is your party?</label>
                     <input type="text" placeholder="Search for City, State or Zip Code">
@@ -179,8 +185,11 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane" id="tab-3">
+              <div class="tab-pane pane-3" id="tab-3">
                 <form action="">
+                  <div class="tab-ttl show-xs">
+                    <span><i></i></span>Bands
+                  </div>
                   <div class="form-set clearfix">
                     <label for="">Where is your party?</label>
                     <input type="text" placeholder="Search for City, State or Zip Code">
@@ -223,8 +232,11 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane" id="tab-4">
+              <div class="tab-pane pane-4" id="tab-4">
                 <form action="">
+                  <div class="tab-ttl show-xs">
+                    <span><i></i></span>Transfers
+                  </div>
                   <div class="form-set clearfix">
                     <label for="">Where is your party?</label>
                     <input type="text" placeholder="Search for City, State or Zip Code">
@@ -267,8 +279,11 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane" id="tab-5">
+              <div class="tab-pane pane-5" id="tab-5">
                 <form action="">
+                  <div class="tab-ttl show-xs">
+                    <span><i></i></span>Packages
+                  </div>
                   <div class="form-set clearfix">
                     <label for="">Where is your party?</label>
                     <input type="text" placeholder="Search for City, State or Zip Code">
@@ -312,6 +327,13 @@
                 </form>
               </div>
             </div>
+            <ul class="list-unstyled small-tabs show-xs" role="tablist">
+              <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Venues</a></li>
+              <li><a href="#tab-2" role="tab" data-toggle="tab">DJ's</a></li>
+              <li><a href="#tab-3" role="tab" data-toggle="tab">Bands</a></li>
+              <li><a href="#tab-4" role="tab" data-toggle="tab">Transfers</a></li>
+              <li><a href="#tab-5" role="tab" data-toggle="tab">Packages</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -321,7 +343,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div id="featured-carousel" class="featured-carousel carousel slide bordered hide-s" data-ride="carousel" data-interval="false">
+          <div id="featured-carousel" class="featured-carousel carousel slide bordered hide-s hide-xs" data-ride="carousel" data-interval="false">
             <div class="shadow"></div>
             <div class="carousel-inner">
               <div class="item active">
@@ -707,6 +729,94 @@
               <li data-target="#featured-carousel-small" data-slide-to="4"></li>
             </ol>
           </div>
+          <div id="featured-carousel-xs" class="featured-carousel carousel slide bordered show-xs" data-ride="carousel" data-interval="false">
+            <div class="shadow"></div>
+            <div class="carousel-inner">
+              <div class="item active">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price">$59 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon new"><span>New</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price">$59 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon new"><span>New</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="list-unstyled">
+                  <li class="tile">
+                    <img src="public/images/featured.png" alt="">
+                    <h4>Quisque rhoncus lectus at augue</h4>
+                    <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                    <div class="meta-data">
+                      <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                    </div>
+                    <a href="" class="eg-btn eg-btn-1">Book Now</a>
+                    <div class="ribbon discount"><span>50%</span></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <ol class="carousel-indicators">
+              <li data-target="#featured-carousel-xs" data-slide-to="0" class="active"></li>
+              <li data-target="#featured-carousel-xs" data-slide-to="1"></li>
+              <li data-target="#featured-carousel-xs" data-slide-to="2"></li>
+              <li data-target="#featured-carousel-xs" data-slide-to="3"></li>
+              <li data-target="#featured-carousel-xs" data-slide-to="4"></li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
@@ -720,7 +830,100 @@
             <a href="" class="link-1">View All</a>
           </div>
           <div id="deals-wrapper" class="bordered">
-            <ul class="list-unstyled clearfix">
+            <div id="flash-carousel" class="flash-carousel carousel slide show-xs" data-ride="carousel" data-interval="false">
+              <div class="carousel-inner clearfix">
+                <div class="item active">
+                  <ul class="list-unstyled clearfix">
+                    <li class="tile">
+                      <img src="public/images/featured.png" alt="">
+                      <div class="text-wrapper">
+                        <h4>Quisque rhoncus lectus at augue</h4>
+                        <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                      </div>
+                      <div class="meta-data">
+                        <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                      </div>
+                      <div class="ribbon discount"><span>50%</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul class="list-unstyled clearfix">
+                    <li class="tile">
+                      <img src="public/images/featured.png" alt="">
+                      <div class="text-wrapper">
+                        <h4>Quisque rhoncus lectus at augue</h4>
+                        <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                      </div>
+                      <div class="meta-data">
+                        <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                      </div>
+                      <div class="ribbon discount"><span>50%</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul class="list-unstyled clearfix">
+                    <li class="tile">
+                      <img src="public/images/featured.png" alt="">
+                      <div class="text-wrapper">
+                        <h4>Quisque rhoncus lectus at augue</h4>
+                        <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                      </div>
+                      <div class="meta-data">
+                        <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                      </div>
+                      <div class="ribbon discount"><span>50%</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul class="list-unstyled clearfix">
+                    <li class="tile">
+                      <img src="public/images/featured.png" alt="">
+                      <div class="text-wrapper">
+                        <h4>Quisque rhoncus lectus at augue</h4>
+                        <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                      </div>
+                      <div class="meta-data">
+                        <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                      </div>
+                      <div class="ribbon discount"><span>50%</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul class="list-unstyled clearfix">
+                    <li class="tile">
+                      <img src="public/images/featured.png" alt="">
+                      <div class="text-wrapper">
+                        <h4>Quisque rhoncus lectus at augue</h4>
+                        <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius.</p>
+                      </div>
+                      <div class="meta-data">
+                        <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                      </div>
+                      <div class="ribbon discount"><span>50%</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <ol class="carousel-indicators">
+                <li data-target="#flash-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#flash-carousel" data-slide-to="1"></li>
+                <li data-target="#flash-carousel" data-slide-to="2"></li>
+                <li data-target="#flash-carousel" data-slide-to="3"></li>
+                <li data-target="#flash-carousel" data-slide-to="4"></li>
+              </ol>
+            </div>
+            
+            <ul class="list-unstyled clearfix hide-xs">
               <li class="tile">
                 <img src="public/images/featured.png" alt="">
                 <div class="text-wrapper">
@@ -797,28 +1000,28 @@
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
             </ul>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled hide-xs">
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
             </ul>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled hide-xs">
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
             </ul>
-            <ul class="list-unstyled hide-s">
+            <ul class="list-unstyled hide-s hide-xs">
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
             </ul>
-            <ul class="list-unstyled hide-s">
+            <ul class="list-unstyled hide-s hide-xs">
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
               <li><a href="">Chicago</a></li>
@@ -839,7 +1042,7 @@
               <h1 class="logo"><a href="">EventsGlue</a></h1>
               <p>Events Glu lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere eu dui sodales ullamcorper. Suspendisse potenti. Aliquam dictum viverra felis hendrerit efficitur</p>
             </div>
-            <div class="footer-top_link">
+            <div class="footer-top_link hide-xs">
               <div>
                 <h6>Company</h6>
                 <ul class="list-unstyled">
@@ -890,7 +1093,7 @@
                 <button class="eg-btn eg-btn-1">Subscribe</button>
               </div>
             </div>
-            <div class="footer-bottom_social">
+            <div class="footer-bottom_social hide-xs">
               <h4>we are social</h4>
               <ul class="list-unstyled social">
                 <li><a href="">Facebook</a></li>

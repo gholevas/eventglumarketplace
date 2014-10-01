@@ -40,6 +40,7 @@ Variables
 
 @medium: ~"(min-width: 993px) and (max-width: 1200px)";
 @small: ~"(min-width: 768px) and (max-width: 992px)";
+@xs: ~"(max-width: 767px)";
 
 
 /***************************
@@ -98,6 +99,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .show-s {
+    display: block;
+  }
+}
+
+@media @xs {
+  .hide-xs {
+    display: none !important;
+  }
+
+  .show-xs {
     display: block;
   }
 }
@@ -264,6 +275,11 @@ Header Styles
     height: 55px;
     line-height: 55px;
     text-align: right;
+
+    @media @xs {
+      border: none;
+      width: 26px;
+    }
 
     span {
       background: url("../images/bg-mm.png") no-repeat 0 0;
@@ -450,12 +466,16 @@ Categories Search Styles
     width: 620px;
   }
 
-  @media @small {
+  @media @small, @xs {
     width: 100%;
     margin: 53px 0 0 0;
   }
+
+  @media @xs {
+    margin-top: 23px;
+  }
   
-  ul {
+  ul:not(.small-tabs) {
     margin: 0;
     overflow: hidden;
 
@@ -578,21 +598,160 @@ Categories Search Styles
     }
   }
 
+  .small-tabs {
+    text-align: center;
+    margin-top: 19px;
+    
+    li {
+      display: inline-block;
+
+      &.active {
+        a {
+          background-color: @green-1;
+          height: 12px;
+          width: 12px;
+        }
+      }
+
+      a {
+        background-color: @gray-12;
+        border: medium none;
+        margin: 0 3px;
+        text-indent: -999px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        height: 10px;
+        width: 10px;
+      }
+    }
+  }
+
   .tab-content {
     background-color: #FFFFFF;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 
+    @media @xs {
+      border-radius: 5px;
+    }
+
     .tab-pane {
       padding: 25px;
 
+      @media @xs {
+        padding-top: 0;
+      }
+
+      &.pane-1 {
+        .tab-ttl {
+          span {
+            width: 25px;
+            
+            i {
+              background-image: url("../images/icon-tab-1.png");
+            }
+          }
+        }
+      }
+
+      &.pane-2 {
+        .tab-ttl {
+          span {
+            width: 30px;
+            
+            i {
+              background-image: url("../images/icon-tab-2.png");
+            }
+          }
+        }
+      }
+
+      &.pane-3 {
+        .tab-ttl {
+          span {
+            width: 28px;
+            
+            i {
+              background-image: url("../images/icon-tab-3.png");
+            }
+          }
+        }
+      }
+
+      &.pane-4 {
+        .tab-ttl {
+          span {
+            width: 33px;
+            
+            i {
+              background-image: url("../images/icon-tab-4.png");
+            }
+          }
+        }
+      }
+
+      &.pane-5 {
+        .tab-ttl {
+          span {
+            width: 33px;
+            
+            i {
+              background-image: url("../images/icon-tab-5.png");
+              height: 22px;
+            }
+          }
+        }
+      }
+
+      .tab-ttl {
+        padding: 13px 0;
+        border-bottom: 1px solid @gray-7;
+        margin: 0 -25px 13px -25px;
+        text-align: center;
+        color: #000000;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        span {
+          line-height: 33px;
+          height: 33px;
+          display: inline-block;
+          margin-right: 8px;
+
+          i {
+            background-position: 50% 0px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 33px;
+            vertical-align: middle;
+            width: 100%;
+          }
+        }
+      }
+
       .form-set {
         padding-bottom: 25px;
+
+        @media @xs {
+          padding-bottom: 13px;
+        }
 
         >div {
           float: left;
           width: 50%;
           padding: 0 29px;
+
+          @media @xs {
+            float: none;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 13px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
 
           &:first-child {
             padding-left: 0;
@@ -606,6 +765,10 @@ Categories Search Styles
           .how-long-slider {
             margin-top: 25px;
             position: relative;
+
+            @media @xs {
+              margin-top: 13px;
+            }
 
             label {
               margin-bottom: 16px;
@@ -656,6 +819,10 @@ Categories Search Styles
             input[type="text"] {
               width: 138px;
               float: left;
+
+              @media @xs {
+                width: 85%;
+              }
             }
 
             .calendar-trigger {
@@ -669,12 +836,22 @@ Categories Search Styles
               text-align: center;
               line-height: 31px;
               margin-left: 7px;
+
+              @media @xs {
+                width: 14%;
+                margin: 0 0 0 1%;
+              }
             }
           }
         }
 
         & + .form-set {
           border-bottom: 1px solid @gray-7;
+
+          @media @xs {
+            border: none;
+            padding: 0;
+          }
         }
         
         label {
@@ -701,6 +878,10 @@ Categories Search Styles
         width: 203px;
         margin: 25px auto 0 auto;
         font-size: @third-font-size;
+
+        @media @xs {
+          margin-top: 13px;
+        }
       }
     }
   }
@@ -758,6 +939,10 @@ Tiles Styles
     border-bottom: 1px solid @gray-9;
     margin-bottom: 17px;
     padding: 5px 0;
+
+    @media @xs {
+      text-align: center;
+    }
 
     .price {
       font-size: 27px;
@@ -854,27 +1039,34 @@ Featured Styles
           width: 50%;
         }
 
+        @media @xs {
+          width: 100%;
+        }
+
         &:last-child {
           background: none;
         }
       }
     }
+  }
+}
 
-    .carousel-indicators {
-      bottom: auto;
-      left: auto;
-      margin: 0;
-      position: static;
-      width: auto;
+.featured-carousel,
+.flash-carousel {
+  .carousel-indicators {
+    bottom: auto;
+    left: auto;
+    margin: 0;
+    position: static;
+    width: auto;
 
-      li {
-        background-color: @gray-12;
-        border: none;
-        margin: 0 3px;
+    li {
+      background-color: @gray-12;
+      border: none;
+      margin: 0 3px;
 
-        &.active {
-          background-color: @green-1;
-        }
+      &.active {
+        background-color: @green-1;
       }
     }
   }
@@ -909,6 +1101,7 @@ Flash Deals Styles
 
   .link-1 {
     float: right;
+    margin-top: 4px;
   }
 }
 
@@ -922,43 +1115,59 @@ Flash Deals Styles
   #deals-wrapper {
     padding-bottom: 30px;
 
-    .tile {
-      background-color: #fff;
-      box-shadow: 0 0 6px -4px #000000;
-      margin-right: 30px;
-      padding: 0;
-      width: 262px;
+    .carousel-indicators {
+      margin-top: 30px;
+    }
 
-      @media @medium {
-        width: 220px;
-        margin-right: 20px;
+    ul {
+      margin: 0;
+      
+      @media @xs {
+        padding: 2px;
       }
 
-      @media @small {
-        width: 228px;
-        margin-right: 18px;
+      .tile {
+        background-color: #fff;
+        box-shadow: 0 0 6px -4px #000000;
+        margin-right: 30px;
+        padding: 0;
+        width: 262px;
 
-        &:nth-child(3) {
-          margin-right: 0;
+        @media @medium {
+          width: 220px;
+          margin-right: 20px;
         }
-      }
-
-      img {
-        margin: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
 
         @media @small {
-          display: none;
-        }
-      }
+          width: 228px;
+          margin-right: 18px;
 
-      .meta-data {
-        padding: 5px 18px;
-        margin: 0;
-        border-bottom: none;
+          &:nth-child(3) {
+            margin-right: 0;
+          }
+        }
+
+        @media @xs {
+          width: 100%;
+        }
+
+        img {
+          margin: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+
+          @media @small {
+            display: none;
+          }
+        }
+
+        .meta-data {
+          padding: 5px 18px;
+          margin: 0;
+          border-bottom: none;
+        }
       }
     }
   }
@@ -985,6 +1194,10 @@ Popular Cities Styles
 
       @media @small {
         width: 25%;
+      }
+
+      @media @xs {
+        width: 50%;
       }
 
       li {
@@ -1036,13 +1249,28 @@ Footer Styles
         width: 240px;
       }
 
+      @media @xs {
+        float: none;
+        width: 100%;
+      }
+
       .logo {
         margin-bottom: 15px;
+
+        @media @xs {
+          a {
+            margin: 0 auto;
+          }
+        }
       }
 
       p {
         line-height: 20px;
         text-align: justify;
+
+        @media @xs {
+          text-align: center;
+        }
       }
     }
 
@@ -1089,10 +1317,19 @@ Footer Styles
       text-transform: uppercase;
       color: @gray-14;
       margin-bottom: 12px;
+
+      @media @xs {
+        font-size: 13px;
+        text-align: center;
+      }
     }
 
     .footer-bottom_subscribe {
       float: left;
+
+      @media @xs {
+        float: none;
+      }
 
       div {
         overflow: hidden;
@@ -1112,6 +1349,11 @@ Footer Styles
           @media @medium, @small {
             width: 255px;
           }
+
+          @media @xs {
+            width: 69%;
+            margin-right: 1%;
+          }
         }
 
         input[type="submit"],
@@ -1121,6 +1363,11 @@ Footer Styles
           height: 38px;
           line-height: 38px;
           margin-left: 9px;
+
+          @media @xs {
+            width: 30%;
+            margin: 0;
+          }
         }
       }
     }
@@ -1196,9 +1443,19 @@ Footer Styles
   font-size: 12px;
   overflow: hidden;
 
+  @media @xs {
+    line-height: normal;
+    padding: 20px 0;
+  }
+
   p {
     float: left;
     margin: 0;
+
+    @media @xs {
+      float: none;
+      text-align: center;
+    }
   }
 
   ul {
@@ -1206,10 +1463,21 @@ Footer Styles
     float: right;
     overflow: hidden;
 
+    @media @xs {
+      float: none;
+      text-align: center;
+      margin-top: 5px;
+    }
+
     li {
       background: url("../images/dot-2.png") no-repeat 100% 50%;
       float: left;
       padding: 0 15px;
+
+      @media @xs {
+        float: none;
+        display: inline-block;
+      }
 
       &:last-child {
         background: none;
@@ -1242,6 +1510,10 @@ Mobile Menu Styles
   ul {
     background-color: @mm-bg;
     margin: 0;
+
+    @media @xs {
+      margin: 0 -15px
+    }
 
     li {
 
