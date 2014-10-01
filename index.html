@@ -247,7 +247,10 @@
                   <div class="form-set clearfix">
                     <div>
                       <label for="">When is your party?</label>
-                      <input type="text" placeholder="dd/mm/yyyy">
+                      <div class="calendar clearfix">
+                        <input id="calendar-1" type="text" placeholder="dd/mm/yyyy">
+                        <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-1')[0]);" class="calendar-trigger"><span class="glyphicon glyphicon-calendar"></span></a>
+                      </div>
                       <div class="ui-slider-wrapper guests-slider">
                         <label for="">How many guests?</label>
                         <span class="guests">1 People</span>

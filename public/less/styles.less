@@ -35,6 +35,8 @@ Variables
 @arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
 @helvetica: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
+@medium: ~"(min-width: 993px) and (max-width: 1200px)";
+
 
 /***************************
 ****************************
@@ -67,6 +69,23 @@ input {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: normal;
+}
+
+.show-xs,
+.show-s,
+.show-m,
+.show-xl {
+  display: none;
+}
+
+@media @medium {
+  .hide-m {
+    display: none !important;
+  }
+
+  .show-m {
+    display: block;
+  }
 }
 
 .logo {
@@ -304,6 +323,8 @@ Main Menu Styles
         text-align: center;
         text-transform: uppercase;
         font-weight: 500;
+
+        @media @medium { padding: 0 18px; }
       }
 
       &.active a {
@@ -375,6 +396,10 @@ Categories Search Styles
   box-shadow: 0 0 25px -15px #000;
   margin: 53px auto 0;
   width: 770px;
+
+  @media @medium {
+    width: 620px;
+  }
   
   ul {
     margin: 0;
@@ -846,6 +871,11 @@ Flash Deals Styles
       padding: 0;
       width: 262px;
 
+      @media @medium {
+        width: 220px;
+        margin-right: 20px;
+      }
+
       img {
         margin: 0;
       }
@@ -923,6 +953,10 @@ Footer Styles
       float: left;
       width: 345px;
 
+      @media @medium {
+        width: 255px;
+      }
+
       .logo {
         margin-bottom: 15px;
       }
@@ -980,7 +1014,6 @@ Footer Styles
 
     .footer-bottom_subscribe {
       float: left;
-      width: 470px;
 
       div {
         overflow: hidden;
@@ -996,14 +1029,19 @@ Footer Styles
           padding-left: 45px;
           padding-right: 20px;
           float: left;
+
+          @media @medium {
+            width: 255px;
+          }
         }
 
         input[type="submit"],
         button {
           width: 114px;
-          float: right;
+          float: left;
           height: 38px;
           line-height: 38px;
+          margin-left: 9px;
         }
       }
     }
