@@ -23,6 +23,7 @@ $(function() {
   $('#calendar-4').datepicker();
   $('#calendar-5').datepicker();
   $('#calendar-aside').datepicker();
+  $('#calendar-filter').datepicker();
 
   $('.budget-slider').slider({
     range: true,
@@ -87,7 +88,13 @@ $(function() {
       setFooterBackground((current % 5) + 1);
       current++;
     }, interval);
-  };
+  }
 
   footerBgRotating(8000);
+
+  $('.widget-trigger').on('click', function() {
+    $(this).parent().siblings().find('.widget-trigger').addClass('collapsed');
+    var $el = $($(this).attr('data-target'));
+    $el.siblings().removeClass('in');
+  });
 });

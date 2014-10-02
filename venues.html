@@ -82,9 +82,9 @@
             <h2>we found 626 venues</h2>
             <div class="menu-filters show-s show-xs">
               <ul class="list-unstyled">
-                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-details"><span></span>Details</span></li>
-                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-filters"><span></span>Filters</span></li>
-                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-map"><span></span>Map</span></li>
+                <li><span class="collapsed widget-trigger" data-toggle="collapse" data-target="#widget-details"><span></span>Details</span></li>
+                <li><span class="collapsed widget-trigger" data-toggle="collapse" data-target="#widget-filters"><span></span>Filters</span></li>
+                <li><span class="collapsed widget-trigger" data-toggle="collapse" data-target="#widget-map"><span></span>Map</span></li>
               </ul>
             </div>
             <div class="controls hide-xs">
@@ -124,16 +124,16 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div id="widget-details" class="widget widget-details collapse">
             <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
-            <div>
+            <div class="clearfix">
               <h6>Where is your party?</h6>
               <input class="where-input" type="text" placeholder="City or Zip Code">
             </div>
-            <div>
+            <div class="clearfix">
               <h6>When is your party?</h6>
-              <input class="when-input" id="calendar-aside" type="text" placeholder="26/04/2015">
-              <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"><span class="glyphicon glyphicon-calendar"></span></a>
+              <input class="when-input" id="calendar-filter" type="text" placeholder="26/04/2015">
+              <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-filter')[0]);" class="calendar-trigger"></a>
             </div>
-            <div>
+            <div class="clearfix">
               <h6>What time is your party?</h6>
               <div class="select-wrapper time">
                 <select>
@@ -147,14 +147,14 @@
                 </select>
               </div>
             </div>
-            <div>
+            <div class="clearfix">
               <h6>How long is your party?</h6>
               <div class="ui-slider long-slider"></div>
               <span class="sliders-text">
                 <span class="long-text"></span>
               </span>
             </div>
-            <div>
+            <div class="clearfix">
               <h6>How many guests?</h6>
               <div class="ui-slider guests-slider-aside"></div>
               <span class="sliders-text">
@@ -164,14 +164,14 @@
           </div>
           <div id="widget-filters" class="widget widget-filters collapse">
             <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
-            <div>
+            <div class="clearfix">
               <h6>What's your budget?</h6>
               <div class="ui-slider budget-slider"></div>
               <span class="sliders-text">
                 <span class="bg-text"></span>
               </span>
             </div>
-            <div>
+            <div class="clearfix">
               <h6>[Title undefined]</h6>
               <ul class="list-unstyled">
                 <li><label for=""><input type="checkbox"> Show All</label></li>
@@ -179,7 +179,7 @@
                 <li><label for=""><input type="checkbox"> Standing Event</label></li>
               </ul>
             </div>
-            <div>
+            <div class="clearfix">
               <h6>Event Type</h6>
               <ul class="list-unstyled">
                 <li><label for=""><input type="checkbox"> Show All</label></li>
@@ -194,7 +194,7 @@
           </div>
           <div id="widget-map" class="widget widget-map collapse">
             <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
-            <div>
+            <div class="clearfix">
               <img src="public/images/map.png" alt="">
             </div>
           </div>
@@ -209,16 +209,16 @@
           <aside id="side-bar">
             <div class="widget widget-details">
               <div class="title"><span></span> details</div>
-              <div>
+              <div class="clearfix">
                 <h6>Where is your party?</h6>
                 <input class="where-input" type="text" placeholder="City or Zip Code">
               </div>
-              <div>
+              <div class="clearfix">
                 <h6>When is your party?</h6>
                 <input class="when-input" id="calendar-aside" type="text" placeholder="26/04/2015">
-                <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"><span class="glyphicon glyphicon-calendar"></span></a>
+                <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"></a>
               </div>
-              <div>
+              <div class="clearfix">
                 <h6>What time is your party?</h6>
                 <div class="select-wrapper time">
                   <select>
@@ -232,14 +232,14 @@
                   </select>
                 </div>
               </div>
-              <div>
+              <div class="clearfix">
                 <h6>How long is your party?</h6>
                 <div class="ui-slider long-slider"></div>
                 <span class="sliders-text">
                   <span class="long-text"></span>
                 </span>
               </div>
-              <div>
+              <div class="clearfix">
                 <h6>How many guests?</h6>
                 <div class="ui-slider guests-slider-aside"></div>
                 <span class="sliders-text">
@@ -249,14 +249,14 @@
             </div>
             <div class="widget widget-filters">
               <div class="title"><span></span> Filters</div>
-              <div>
+              <div class="clearfix">
                 <h6>What's your budget?</h6>
                 <div class="ui-slider budget-slider"></div>
                 <span class="sliders-text">
                   <span class="bg-text"></span>
                 </span>
               </div>
-              <div>
+              <div class="clearfix">
                 <h6>[Title undefined]</h6>
                 <ul class="list-unstyled">
                   <li><label for=""><input type="checkbox"> Show All</label></li>
@@ -264,7 +264,7 @@
                   <li><label for=""><input type="checkbox"> Standing Event</label></li>
                 </ul>
               </div>
-              <div>
+              <div class="clearfix">
                 <h6>Event Type</h6>
                 <ul class="list-unstyled">
                   <li><label for=""><input type="checkbox"> Show All</label></li>
@@ -279,7 +279,9 @@
             </div>
             <div class="widget widget-map">
               <div class="title"><span></span> map Location</div>
-              <img src="public/images/map.png" alt="">
+              <div class="clearfix">
+                <img src="public/images/map.png" alt="">
+              </div>
             </div>
           </aside>
         </div>
