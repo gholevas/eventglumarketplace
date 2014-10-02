@@ -40,6 +40,7 @@ Variables
 @helvetica: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 @mm-bg: rgba(54, 54, 54, 0.98);
+@light-shadow: 0 0 6px -4px #000000;
 
 @medium: ~"(min-width: 993px) and (max-width: 1200px)";
 @small: ~"(min-width: 768px) and (max-width: 992px)";
@@ -1155,7 +1156,7 @@ Flash Deals Styles
 
       .tile {
         background-color: #fff;
-        box-shadow: 0 0 6px -4px #000000;
+        box-shadow: @light-shadow;
         margin-right: 30px;
         padding: 0;
         width: 262px;
@@ -1636,22 +1637,58 @@ Controller Styles
 #controllers {
   margin-bottom: 28px;
 
+  @media @small {
+    margin-bottom: 16px;
+  }
+
+  @media @xs {
+    margin-bottom: 18px;
+  }
+
   .controls-wrapper {
     padding: 14px 0;
     border-bottom: 1px solid @gray-19;
     overflow: hidden;
     color: @gray-6;
     font-size: 13px;
+    position: relative;
+
+    @media @small, @xs {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    .menu-filters {
+      float: right;
+
+      @media @xs {
+        float: none;
+      }
+    }
 
     h2 {
       text-transform: uppercase;
       float: left;
       line-height: 44px;
+
+      @media @xs {
+        font-size: 17px;
+        float: none;
+        margin-bottom: 12px;
+        border-bottom: 1px solid @gray-19;
+      }
     }
 
     .controls {
       float: right;
       overflow: hidden;
+
+      @media @small {
+        border-top: 1px solid @gray-19;
+        float: none;
+        width: 100%;
+        padding-top: 13px;
+      }
 
       >div {
         float: left;
@@ -1763,6 +1800,10 @@ Sidebar Styles
 ****************************
 ***************************/
 
+#side-bar {
+  padding-bottom: 28px;
+}
+
 .widget {
   .title {
     color: @gray-20;
@@ -1796,6 +1837,10 @@ Sidebar Styles
 
     &.when-input {
       width: 203px;
+
+      @media @medium {
+        width: 153px;
+      }
     }
   }
 
@@ -1865,6 +1910,365 @@ Sidebar Styles
     .title {
       span {
         background-image: url("../images/icon-sidebar-3.png");
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Venues Styles
+****************************
+***************************/
+
+#venues-wrapper {
+  padding-bottom: 45px;
+
+  @media @xs {
+    padding-bottom: 25px;
+  }
+
+  ul {
+    margin: 0;
+
+    .tile {
+      box-shadow: @light-shadow;
+      background-color: #ffffff;
+      float: none;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      height: 170px;
+      margin-bottom: 27px;
+
+      @media @xs {
+        height: auto;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .img-wrapper {
+        position: relative;
+        width: 298px;
+        float: left;
+
+        img {
+          margin: 0;
+        }
+
+        @media @xs {
+          float: none;
+          width: 100%;
+        }
+      }
+
+      .text-wrapper {
+        float: left;
+        height: 170px;
+        padding: 17px 25px 0;
+        width: 549px;
+
+        @media @medium {
+          width: 399px;
+        }
+
+        @media @small {
+          width: 422px;
+        }
+
+        @media @xs {
+          float: none;
+          width: 100%;
+          height: auto;
+          padding: 17px 25px;
+        }
+
+        > span {
+          line-height: 22px;
+          margin-bottom: 5px;
+        }
+      }
+
+      h4 {
+        font-size: 17px;
+        line-height: 22px;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 5px;
+
+        @media @xs {
+          margin-bottom: 15px;
+        }
+      }
+
+      .meta-data {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+
+        @media @xs {
+          text-align: left;
+          padding-top: 17px;
+        }
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Pager Styles
+****************************
+***************************/
+
+.eg-pager {
+  overflow: hidden;
+  margin-top: 25px;
+
+  > span {
+    float: left;
+    color: @gray-6;
+    line-height: 27px;
+  }
+
+  > ul {
+    margin: 0;
+    float: right;
+    overflow: hidden;
+
+    @media @xs {
+      float: none;
+      text-align: center;
+    }
+
+    li {
+      float: left;
+      margin-left: 5px;
+
+      @media @xs {
+        float: none;
+        display: inline-block;
+      }
+
+      a {
+        background-color: @gray-19;
+        display: block;
+        border-radius: 100%;
+        font-size: 15px;
+        font-weight: bold;
+        color: @gray-20;
+        height: 27px;
+        width: 27px;
+        line-height: 27px;
+        text-align: center;
+      }
+
+      &.active,
+      &:hover {
+        a {
+          background-color: @green-1;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Menu Filters Styles
+****************************
+***************************/
+
+.menu-filters {
+  margin-bottom: 10px;  
+
+  @media @xs {
+    float: none;
+    margin-bottom: 0;
+  }
+  
+  > ul {
+    margin: 0;
+    overflow: hidden;
+
+    li {
+      float: left;
+      border-right: 1px solid @gray-19;
+      padding: 0 20px;
+
+      @media @xs {
+        padding: 0;
+        text-align: center;
+        width: 33.33%;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      > span {
+        line-height: 44px;
+        height: 44px;
+        display: block;
+        color: @green-1;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        span {
+          display: inline-block;
+          margin-right: 10px;
+          vertical-align: middle;
+          width: 16px;
+          height: 16px;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+        }
+
+        &.collapsed {
+          color: @gray-20;
+        }
+
+        &:hover {
+          color: @green-1;
+        }
+      }
+
+      &:nth-child(1) {
+        > span {
+
+          span {
+            background-image: url("../images/icon-sidebar-1-hover.png");
+          }
+          
+          &.collapsed {
+            span {
+              background-image: url("../images/icon-sidebar-1.png");
+            }
+          }
+
+          &:hover {
+            span {
+              background-image: url("../images/icon-sidebar-1-hover.png");
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        > span {
+
+          span {
+            background-image: url("../images/icon-sidebar-2-hover.png");
+          }
+          
+          &.collapsed {
+            span {
+              background-image: url("../images/icon-sidebar-2.png");
+            }
+          }
+
+          &:hover {
+            span {
+              background-image: url("../images/icon-sidebar-2-hover.png");
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        > span {
+
+          span {
+            background-image: url("../images/icon-sidebar-3-hover.png");
+          }
+          
+          &.collapsed {
+            span {
+              background-image: url("../images/icon-sidebar-3.png");
+            }
+          }
+
+          &:hover {
+            span {
+              background-image: url("../images/icon-sidebar-3-hover.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#filters-mobile {
+  position: relative;
+
+  .widget {
+    background-color: #fff;
+    box-shadow: 0 0 6px -4px #000;
+    position: absolute;
+    right: 0;
+    top: -85px;
+    width: 275px;
+    z-index: 10;
+
+    @media @xs {
+      width: 100%;
+      top: -10px;
+    }
+
+    .widget-arrow {
+      left: 50%;
+      margin-left: -10px;
+      position: absolute;
+      top: -9px;
+    }
+
+    .ui-slider {
+      background-color: @gray-10;
+    }
+
+    > div {
+      padding: 15px 28px;
+    }
+
+    &.widget-details {
+      right: 118px;
+
+      @media @xs {
+        right: 0
+      }
+
+      @media @xs {
+        .widget-arrow {
+          margin: 0;
+          left: 18%;
+        }
+      }
+    }
+
+    &.widget-map {
+      .widget-arrow {
+        left: auto;
+        margin: 0;
+        right: 18px;
+        width: auto;
+
+        @media @xs {
+          right: 15%;
+        }
       }
     }
   }

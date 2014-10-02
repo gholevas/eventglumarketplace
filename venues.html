@@ -80,7 +80,14 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="controls-wrapper">
             <h2>we found 626 venues</h2>
-            <div class="controls">
+            <div class="menu-filters show-s show-xs">
+              <ul class="list-unstyled">
+                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-details"><span></span>Details</span></li>
+                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-filters"><span></span>Filters</span></li>
+                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-map"><span></span>Map</span></li>
+              </ul>
+            </div>
+            <div class="controls hide-xs">
               <div class="grids">
                 <span>View</span>
                 <ul class="list-unstyled">
@@ -111,10 +118,94 @@
       </div>
     </div>
   </section>
+  <section id="filters-mobile">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div id="widget-details" class="widget widget-details collapse">
+            <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
+            <div>
+              <h6>Where is your party?</h6>
+              <input class="where-input" type="text" placeholder="City or Zip Code">
+            </div>
+            <div>
+              <h6>When is your party?</h6>
+              <input class="when-input" id="calendar-aside" type="text" placeholder="26/04/2015">
+              <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"><span class="glyphicon glyphicon-calendar"></span></a>
+            </div>
+            <div>
+              <h6>What time is your party?</h6>
+              <div class="select-wrapper time">
+                <select>
+                  <option value="">12:30</option>
+                </select>
+              </div>
+              <div class="select-wrapper type">
+                <select>
+                  <option value="">AM</option>
+                  <option value="">PM</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <h6>How long is your party?</h6>
+              <div class="ui-slider long-slider"></div>
+              <span class="sliders-text">
+                <span class="long-text"></span>
+              </span>
+            </div>
+            <div>
+              <h6>How many guests?</h6>
+              <div class="ui-slider guests-slider-aside"></div>
+              <span class="sliders-text">
+                <span class="guests-text"></span>
+              </span>
+            </div>
+          </div>
+          <div id="widget-filters" class="widget widget-filters collapse">
+            <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
+            <div>
+              <h6>What's your budget?</h6>
+              <div class="ui-slider budget-slider"></div>
+              <span class="sliders-text">
+                <span class="bg-text"></span>
+              </span>
+            </div>
+            <div>
+              <h6>[Title undefined]</h6>
+              <ul class="list-unstyled">
+                <li><label for=""><input type="checkbox"> Show All</label></li>
+                <li><label for=""><input type="checkbox"> Seated Event</label></li>
+                <li><label for=""><input type="checkbox"> Standing Event</label></li>
+              </ul>
+            </div>
+            <div>
+              <h6>Event Type</h6>
+              <ul class="list-unstyled">
+                <li><label for=""><input type="checkbox"> Show All</label></li>
+                <li><label for=""><input type="checkbox"> Wedding</label></li>
+                <li><label for=""><input type="checkbox"> Corporate</label></li>
+                <li><label for=""><input type="checkbox"> Birthday</label></li>
+                <li><label for=""><input type="checkbox"> Graduation</label></li>
+                <li><label for=""><input type="checkbox"> Baptize</label></li>
+                <li><label for=""><input type="checkbox"> Anniversary</label></li>
+              </ul>
+            </div>
+          </div>
+          <div id="widget-map" class="widget widget-map collapse">
+            <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
+            <div>
+              <img src="public/images/map.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="venues-search-results">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-13 col-lg-3">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 hide-s hide-xs">
           <aside id="side-bar">
             <div class="widget widget-details">
               <div class="title"><span></span> details</div>
@@ -191,6 +282,160 @@
               <img src="public/images/map.png" alt="">
             </div>
           </aside>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+          <div id="venues-wrapper">
+            <ul class="list-unstyled">
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="eg-pager">
+              <span class="hide-xs">Showing <strong>1-10</strong> of 626 venues</span>
+              <ul class="list-unstyled">
+                <li class="active"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
