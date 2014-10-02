@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Events Glue - Venues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+  <link rel="stylesheet" href="public/styles/styles.css">
+</head>
+<body class="venues-page">
+  <header id="header" class="rainbow">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h1 class="logo"><a href="">EventsGlue</a></h1>
+          <ul class="header-top-links list-unstyled hide-s hide-xs">
+            <li><a href="">Sign In</a></li>
+            <li><a href="" class="eg-btn eg-btn-1">Register</a></li>
+          </ul>
+          <span class="trigger-mm show-s show-xs" data-toggle="collapse" data-target="#mobile-menu"><span></span></span>
+          <div id="search" class="hide-xs">
+            <form action="">
+              <input type="text" placeholder="Search for fun...">
+              <button><span class="glyphicon glyphicon-search"></span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav id="main-menu" class="hide-s hide-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="list-unstyled">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Venues</a></li>
+            <li><a href="">DS's</a></li>
+            <li><a href="">Bands</a></li>
+            <li><a href="">Limos / Party Buses</a></li>
+            <li><a href="">Photographers</a></li>
+            <li><a href="">Party Packages</a></li>
+            <li><a href="">More</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav id="mobile-menu" class="collapse">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="list-unstyled">
+            <li class="search hide-s show-xs">
+              <form action="">
+                <input type="text" placeholder="Search for fun...">
+                <button></button>
+              </form>
+            </li>
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Venues</a></li>
+            <li><a href="">DS's</a></li>
+            <li><a href="">Bands</a></li>
+            <li><a href="">Limos / Party Buses</a></li>
+            <li><a href="">Photographers</a></li>
+            <li><a href="">Party Packages</a></li>
+            <li><a href="">More</a></li>
+            <li class="links">
+              <a href="">Sign In</a>
+              <a href="" class="eg-btn eg-btn-1">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="controllers" class="top-line">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="controls-wrapper">
+            <h2>we found 626 venues</h2>
+            <div class="menu-filters show-s show-xs">
+              <ul class="list-unstyled">
+                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-details"><span></span>Details</span></li>
+                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-filters"><span></span>Filters</span></li>
+                <li><span class="collapsed" data-toggle="collapse" data-target="#widget-map"><span></span>Map</span></li>
+              </ul>
+            </div>
+            <div class="controls hide-xs">
+              <div class="grids">
+                <span>View</span>
+                <ul class="list-unstyled">
+                  <li class="active"><a href="">Grid 1</a></li>
+                  <li><a href="">Grid 2</a></li>
+                </ul>
+              </div>
+              <div class="pages">
+                <span>Show</span>
+                <div class="select-wrapper">
+                  <select>
+                    <option value="">10</option>
+                  </select>
+                </div>
+                <span>per page</span>
+              </div>
+              <div class="sort">
+                <span>Sort by</span>
+                <div class="select-wrapper">
+                  <select>
+                    <option value="">Location</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="filters-mobile">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div id="widget-details" class="widget widget-details collapse">
+            <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
+            <div>
+              <h6>Where is your party?</h6>
+              <input class="where-input" type="text" placeholder="City or Zip Code">
+            </div>
+            <div>
+              <h6>When is your party?</h6>
+              <input class="when-input" id="calendar-aside" type="text" placeholder="26/04/2015">
+              <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"><span class="glyphicon glyphicon-calendar"></span></a>
+            </div>
+            <div>
+              <h6>What time is your party?</h6>
+              <div class="select-wrapper time">
+                <select>
+                  <option value="">12:30</option>
+                </select>
+              </div>
+              <div class="select-wrapper type">
+                <select>
+                  <option value="">AM</option>
+                  <option value="">PM</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <h6>How long is your party?</h6>
+              <div class="ui-slider long-slider"></div>
+              <span class="sliders-text">
+                <span class="long-text"></span>
+              </span>
+            </div>
+            <div>
+              <h6>How many guests?</h6>
+              <div class="ui-slider guests-slider-aside"></div>
+              <span class="sliders-text">
+                <span class="guests-text"></span>
+              </span>
+            </div>
+          </div>
+          <div id="widget-filters" class="widget widget-filters collapse">
+            <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
+            <div>
+              <h6>What's your budget?</h6>
+              <div class="ui-slider budget-slider"></div>
+              <span class="sliders-text">
+                <span class="bg-text"></span>
+              </span>
+            </div>
+            <div>
+              <h6>[Title undefined]</h6>
+              <ul class="list-unstyled">
+                <li><label for=""><input type="checkbox"> Show All</label></li>
+                <li><label for=""><input type="checkbox"> Seated Event</label></li>
+                <li><label for=""><input type="checkbox"> Standing Event</label></li>
+              </ul>
+            </div>
+            <div>
+              <h6>Event Type</h6>
+              <ul class="list-unstyled">
+                <li><label for=""><input type="checkbox"> Show All</label></li>
+                <li><label for=""><input type="checkbox"> Wedding</label></li>
+                <li><label for=""><input type="checkbox"> Corporate</label></li>
+                <li><label for=""><input type="checkbox"> Birthday</label></li>
+                <li><label for=""><input type="checkbox"> Graduation</label></li>
+                <li><label for=""><input type="checkbox"> Baptize</label></li>
+                <li><label for=""><input type="checkbox"> Anniversary</label></li>
+              </ul>
+            </div>
+          </div>
+          <div id="widget-map" class="widget widget-map collapse">
+            <img src="public/images/arrow-3.png" alt="" class="widget-arrow">
+            <div>
+              <img src="public/images/map.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="venues-search-results">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 hide-s hide-xs">
+          <aside id="side-bar">
+            <div class="widget widget-details">
+              <div class="title"><span></span> details</div>
+              <div>
+                <h6>Where is your party?</h6>
+                <input class="where-input" type="text" placeholder="City or Zip Code">
+              </div>
+              <div>
+                <h6>When is your party?</h6>
+                <input class="when-input" id="calendar-aside" type="text" placeholder="26/04/2015">
+                <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"><span class="glyphicon glyphicon-calendar"></span></a>
+              </div>
+              <div>
+                <h6>What time is your party?</h6>
+                <div class="select-wrapper time">
+                  <select>
+                    <option value="">12:30</option>
+                  </select>
+                </div>
+                <div class="select-wrapper type">
+                  <select>
+                    <option value="">AM</option>
+                    <option value="">PM</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <h6>How long is your party?</h6>
+                <div class="ui-slider long-slider"></div>
+                <span class="sliders-text">
+                  <span class="long-text"></span>
+                </span>
+              </div>
+              <div>
+                <h6>How many guests?</h6>
+                <div class="ui-slider guests-slider-aside"></div>
+                <span class="sliders-text">
+                  <span class="guests-text"></span>
+                </span>
+              </div>
+            </div>
+            <div class="widget widget-filters">
+              <div class="title"><span></span> Filters</div>
+              <div>
+                <h6>What's your budget?</h6>
+                <div class="ui-slider budget-slider"></div>
+                <span class="sliders-text">
+                  <span class="bg-text"></span>
+                </span>
+              </div>
+              <div>
+                <h6>[Title undefined]</h6>
+                <ul class="list-unstyled">
+                  <li><label for=""><input type="checkbox"> Show All</label></li>
+                  <li><label for=""><input type="checkbox"> Seated Event</label></li>
+                  <li><label for=""><input type="checkbox"> Standing Event</label></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Event Type</h6>
+                <ul class="list-unstyled">
+                  <li><label for=""><input type="checkbox"> Show All</label></li>
+                  <li><label for=""><input type="checkbox"> Wedding</label></li>
+                  <li><label for=""><input type="checkbox"> Corporate</label></li>
+                  <li><label for=""><input type="checkbox"> Birthday</label></li>
+                  <li><label for=""><input type="checkbox"> Graduation</label></li>
+                  <li><label for=""><input type="checkbox"> Baptize</label></li>
+                  <li><label for=""><input type="checkbox"> Anniversary</label></li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget widget-map">
+              <div class="title"><span></span> map Location</div>
+              <img src="public/images/map.png" alt="">
+            </div>
+          </aside>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+          <div id="venues-wrapper">
+            <ul class="list-unstyled">
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon discount"><span>%50</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price"><span class="discount">$56</span> $28 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="eg-pager">
+              <span class="hide-xs">Showing <strong>1-10</strong> of 626 venues</span>
+              <ul class="list-unstyled">
+                <li class="active"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="container rainbow-smaller">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div id="footer-top">
+            <div class="footer-top_text">
+              <h1 class="logo"><a href="">EventsGlue</a></h1>
+              <p>Events Glu lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere eu dui sodales ullamcorper. Suspendisse potenti. Aliquam dictum viverra felis hendrerit efficitur</p>
+            </div>
+            <div class="footer-top_link hide-xs">
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="footer-bottom">
+            <div class="footer-bottom_subscribe">
+              <h4>Get the Latest news &amp; production updates</h4>
+              <div>
+                <input type="text" placeholder="Enter you email address">
+                <button class="eg-btn eg-btn-1">Subscribe</button>
+              </div>
+            </div>
+            <div class="footer-bottom_social hide-xs">
+              <h4>we are social</h4>
+              <ul class="list-unstyled social">
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Vimeo</a></li>
+                <li><a href="">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="footer-info">
+            <p>&copy; 2014 Event Glu, Inc. All Rights Reserved.</p>
+            <ul class="list-unstyled">
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="public/js/main.js"></script>
+</body>
+</html>
