@@ -34,6 +34,9 @@ module.exports = function(grunt) {
         'bower_components/jquery-ui/ui/mouse.js',
         'public/js/lib/jquery.ui.touch-punch.min.js',
         'bower_components/bootstrap/dist/js/bootstrap.js',
+        'bower_components/angular/angular.js',
+        'public/js/app.js',
+        'public/js/directives.js',
         'public/js/eventsGlue.js'
         ],
         dest: 'public/js/main.js',
@@ -57,6 +60,9 @@ module.exports = function(grunt) {
         'bower_components/jquery-ui/ui/mouse.js',
         'public/js/lib/jquery.ui.touch-punch.min.js',
         'bower_components/bootstrap/dist/js/bootstrap.js',
+        'bower_components/angular/angular.js',
+        'public/js/app.js',
+        'public/js/directives.js',
         'public/js/eventsGlue.js',
         'public/js/main.js'
         ],

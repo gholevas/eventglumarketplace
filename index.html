@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="eventsGlue">
 <head>
   <title>Events Glue</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,7 +76,7 @@
     </div>
   </nav>
   <section id="categories-search">
-    <div class="bgs">
+    <div class="bgs" swap-bgs>
       <div class="bg bg1 show"></div>
     </div>
     <div class="container">
@@ -103,9 +103,9 @@
                   <div class="form-set clearfix">
                     <div>
                       <label for="">When is your party?</label>
-                      <div class="calendar clearfix">
-                        <input id="calendar-1" type="text" placeholder="dd/mm/yyyy">
-                        <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-1')[0]);" class="calendar-trigger"></a>
+                      <div class="calendar clearfix" ui-calendar>
+                        <input class="cal" type="text" placeholder="dd/mm/yyyy">
+                        <span class="calendar-trigger"></span>
                       </div>
                       <div class="ui-slider-wrapper guests-slider">
                         <label for="">How many guests?</label>
@@ -150,9 +150,9 @@
                   <div class="form-set clearfix">
                     <div>
                       <label for="">When is your party?</label>
-                      <div class="calendar clearfix">
-                        <input id="calendar-2" type="text" placeholder="dd/mm/yyyy">
-                        <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-2')[0]);" class="calendar-trigger"></a>
+                      <div class="calendar clearfix" ui-calendar>
+                        <input class="cal" type="text" placeholder="dd/mm/yyyy">
+                        <span class="calendar-trigger"></span>
                       </div>
                       <div class="ui-slider-wrapper guests-slider">
                         <label for="">How many guests?</label>
@@ -197,9 +197,9 @@
                   <div class="form-set clearfix">
                     <div>
                       <label for="">When is your party?</label>
-                      <div class="calendar clearfix">
-                        <input id="calendar-3" type="text" placeholder="dd/mm/yyyy">
-                        <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-3')[0]);" class="calendar-trigger"></a>
+                      <div class="calendar clearfix" ui-calendar>
+                        <input class="cal" type="text" placeholder="dd/mm/yyyy">
+                        <span class="calendar-trigger"></span>
                       </div>
                       <div class="ui-slider-wrapper guests-slider">
                         <label for="">How many guests?</label>
@@ -244,9 +244,9 @@
                   <div class="form-set clearfix">
                     <div>
                       <label for="">When is your party?</label>
-                      <div class="calendar clearfix">
-                        <input id="calendar-4" type="text" placeholder="dd/mm/yyyy">
-                        <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-4')[0]);" class="calendar-trigger"></a>
+                      <div class="calendar clearfix" ui-calendar>
+                        <input class="cal" type="text" placeholder="dd/mm/yyyy">
+                        <span class="calendar-trigger"></span>
                       </div>
                       <div class="ui-slider-wrapper guests-slider">
                         <label for="">How many guests?</label>
@@ -291,9 +291,9 @@
                   <div class="form-set clearfix">
                     <div>
                       <label for="">When is your party?</label>
-                      <div class="calendar clearfix">
-                        <input id="calendar-5" type="text" placeholder="dd/mm/yyyy">
-                        <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-5')[0]);" class="calendar-trigger"></a>
+                      <div class="calendar clearfix" ui-calendar>
+                        <input class="cal" type="text" placeholder="dd/mm/yyyy">
+                        <span class="calendar-trigger"></span>
                       </div>
                       <div class="ui-slider-wrapper guests-slider">
                         <label for="">How many guests?</label>
