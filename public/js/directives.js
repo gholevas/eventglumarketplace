@@ -89,6 +89,8 @@ myapp.directive('imageGallery', [function() {
 
         $($newImgs[position]).addClass('current');
         $caption.html($($newImgs[position]).attr('alt'));
+        var src = $($newImgs[position]).attr('src');
+        $bigImage.attr('src', src);
       });
 
       $($imgs[0]).addClass('current');

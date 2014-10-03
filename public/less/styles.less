@@ -230,20 +230,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.rd-wrapper {
+.styled-input {
   position: relative;
   background-color: @gray-26;
   height: 20px;
   width: 20px;
   border-radius: 100%;
 
-  input[type="radio"] {
+  input[type="radio"],
+  input[type="check"] {
     float: none;
     margin: 0;
     visibility: hidden;
+  }
 
+  input[type="check"] {
     &:checked + label {
       background: url("../images/check-1.png") no-repeat 50% 50% @green-1;
+    }
+  }
+
+  input[type="radio"] {
+    &:checked + label {
+      background: url("../images/radio-1.png") no-repeat 50% 50% @green-1;
     }
   }
 
@@ -2516,11 +2525,19 @@ Venue Details
   img {
     float: left;
     margin-right: 30px;
+
+    @media @medium {
+      width: 251px;
+    }
   }
 
   > div {
     float: left;
     width: 313px;
+
+    @media @medium {
+      width: 249px;
+    }
 
     h5 {
       color: @gray-24;
@@ -2590,6 +2607,10 @@ Details Sidebar Styles
 
     .cal {
       width: 255px;
+
+      @media @medium {
+        width: 188px;
+      }
     }
 
     .ui-slider {
@@ -2619,7 +2640,7 @@ Details Sidebar Styles
             margin-bottom: 0;
           }
 
-          .rd-wrapper {
+          .styled-input {
             float: left;
             margin-right: 8px;
           }
@@ -2693,6 +2714,10 @@ Image Gallery Styles
       opacity: 0.6;
       position: relative;
       margin: 0 3px;
+
+      @media @medium {
+        height: 45px;
+      }
 
       &.current {
         opacity: 1;
