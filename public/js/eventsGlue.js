@@ -17,14 +17,6 @@ $(function() {
     }
   });
 
-  $('#calendar-1').datepicker();
-  $('#calendar-2').datepicker();
-  $('#calendar-3').datepicker();
-  $('#calendar-4').datepicker();
-  $('#calendar-5').datepicker();
-  $('#calendar-aside').datepicker();
-  $('#calendar-filter').datepicker();
-
   $('.budget-slider').slider({
     range: true,
     min: 0,
@@ -60,41 +52,4 @@ $(function() {
   });
 
   $('.long-text').text($('.long-slider').slider('value') + ' Hours');
-
-
-  var $bgs = $('.bgs');
-
-  function setFooterBackground(bgNumber) {
-    var prev = $bgs.find('.bg');
-
-    setTimeout(function () {
-      prev.remove();
-    }, 4100);
-
-    var el = document.createElement('div');
-    el.className += 'bg bg' + bgNumber;
-
-    $bgs.append(el);
-
-    setTimeout(function () {
-      el.className += ' show';
-    }, 20);
-  }
-
-  function footerBgRotating(interval) {
-    var current = 1;
-
-    setInterval(function () {
-      setFooterBackground((current % 5) + 1);
-      current++;
-    }, interval);
-  }
-
-  footerBgRotating(8000);
-
-  $('.widget-trigger').on('click', function() {
-    $(this).parent().siblings().find('.widget-trigger').addClass('collapsed');
-    var $el = $($(this).attr('data-target'));
-    $el.siblings().removeClass('in');
-  });
 });

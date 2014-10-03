@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="eventsGlue">
 <head>
   <title>Events Glue - Venue Detail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -152,8 +152,10 @@
               </div>
               <div class="clearfix">
                 <h6>When is your party?</h6>
-                <input class="when-input" id="calendar-aside" type="text" placeholder="26/04/2015">
-                <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"></a>
+                <div class="clearfix" ui-calendar>
+                  <input class="cal" type="text" placeholder="dd/mm/yyyy">
+                  <span class="calendar-trigger"></span>
+                </div>
               </div>
               <div class="clearfix">
                 <h6>What time is your party?</h6>
