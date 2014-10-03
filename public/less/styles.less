@@ -33,6 +33,7 @@ Variables
 @gray-25: #555555;
 @gray-26: #eaeae5;
 @gray-27: #eeeeee;
+@gray-28: #ecece8;
 @green-1: #83c23f;
 @green-2: #72a936;
 @black-transparent: rgba(0, 0, 0, 0.5);
@@ -230,20 +231,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.rd-wrapper {
+.styled-input {
   position: relative;
   background-color: @gray-26;
   height: 20px;
   width: 20px;
   border-radius: 100%;
 
-  input[type="radio"] {
+  input[type="radio"],
+  input[type="check"] {
     float: none;
     margin: 0;
     visibility: hidden;
+  }
 
+  input[type="check"] {
     &:checked + label {
       background: url("../images/check-1.png") no-repeat 50% 50% @green-1;
+    }
+  }
+
+  input[type="radio"] {
+    &:checked + label {
+      background: url("../images/radio-1.png") no-repeat 50% 50% @green-1;
     }
   }
 
@@ -1057,11 +1067,12 @@ Tiles Styles
 }
 
 .ribbon {
-  position: absolute;
+  height: 88px;
   left: 0;
+  overflow: hidden;
+  position: absolute;
   top: 0;
   width: 88px;
-  height: 88px;
 
   span {
     color: #fff;
@@ -1922,7 +1933,7 @@ Sidebar Styles
     }
   }
 
-  > div:not(.title) {
+  .wg-element:not(.title) {
     border-bottom: 1px solid @gray-19;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -1965,6 +1976,10 @@ Sidebar Styles
         text-align: center;
         text-transform: uppercase;
         width: 131px;
+
+        @media @small {
+          margin-left: -75px;
+        }
       }
 
       .price {
@@ -1973,6 +1988,16 @@ Sidebar Styles
         font-weight: bold;
         float: right;
         line-height: 30px;
+
+        sup {
+          font-size: 60%;
+          top: -9px;
+        }
+
+        @media @small {
+          float: none;
+          margin-left: 12px;
+        }
 
         span {
           font-size: 16px;
@@ -2343,7 +2368,7 @@ Menu Filters Styles
       background-color: @gray-10;
     }
 
-    > div {
+    .wg-element {
       padding: 15px 28px;
     }
 
@@ -2438,8 +2463,14 @@ Venue Details
 #venue-detail {
   padding-bottom: 45px;
 
-  @media @xs {
+  @media @xs, @small {
     padding-bottom: 25px;
+  }
+
+  @media @small, @xs {
+    .row > div:first-child {
+      margin-bottom: 25px;
+    }
   }
 
   #detail {
@@ -2452,6 +2483,20 @@ Venue Details
       padding: 27px 43px 0 43px;
       margin-bottom: 0 !important;
       border-bottom: none !important;
+      min-height: 88px;
+
+      @media @xs {
+        height: auto;
+        padding-bottom: 5px;
+      }
+
+      .price-box {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 195px;
+        height: 80px;
+      }
 
       h2 {
         color: #000000;
@@ -2474,15 +2519,18 @@ Venue Details
     h4 {
       font-size: 16px;
       text-transform: uppercase;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       line-height: 17px;
     }
 
-    > div:not(.title) {
+    > div {
       padding: 25px 43px;
-      margin-bottom: 25px;
       border-bottom: 1px solid @gray-10;
       color: @gray-24;
+
+      @media @xs {
+        padding: 25px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -2505,9 +2553,53 @@ Venue Details
   }
 }
 
+.price-box {
+  border-left: 1px solid @gray-28;
+  padding-left: 24px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: @eg-purple !important;
+  overflow: hidden;
+
+  span {
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 30px;
+    color: @gray-6;
+    display: block;
+    text-transform: none;
+    margin-top: 5px;
+
+    @media @xs {
+      font-size: 30px;
+    }
+
+    sup {
+      font-size: 60%;
+      top: -9px;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: normal;
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  .eg-btn {
+    float: right;
+    width: 105px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
 .room {
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   &:last-child {
     margin-bottom: 0;
@@ -2516,11 +2608,39 @@ Venue Details
   img {
     float: left;
     margin-right: 30px;
+
+    @media @medium {
+      width: 251px;
+    }
+
+    @media @small {
+      width: 302px;
+    }
+
+    @media @xs {
+      width: 100%;
+      float: none;
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
   }
 
   > div {
     float: left;
     width: 313px;
+
+    @media @medium {
+      width: 249px;
+    }
+
+    @media @small {
+      width: 302px;
+    }
+
+    @media @xs {
+      width: 100%;
+      float: none;
+    }
 
     h5 {
       color: @gray-24;
@@ -2582,27 +2702,68 @@ Details Sidebar Styles
   background-color: #FFFFFF;
   box-shadow: @light-shadow;
 
+  @media @small {
+    padding: 0 50px;
+  }
+
   .widget {
-    > div:not(.widget-price) {
+    .wg-element:not(.widget-price) {
       padding: 15px 25px;
       margin-bottom: 0;
+
+      @media @small {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .small-row {
+
+      @media @small {
+        border-bottom: 1px solid @gray-19;
+      }
+      
+      .small-col {
+
+        @media @small {
+          float: left;
+          width: 250px;
+
+          & + .small-col {
+            float: right;
+          }
+        }
+
+        .wg-element {
+          &:last-child {
+            border-bottom: 1px solid @gray-19;
+
+            @media @small {
+              border: none;
+            }
+          }
+        }
+      }
     }
 
     .cal {
       width: 255px;
+
+      @media @medium {
+        width: 188px;
+      }
+
+      @media @small {
+        width: 195px;
+      }
+
+      @media @xs {
+        width: 84%;
+      }
     }
 
     .ui-slider {
       background-color: @gray-10;
-    }
-
-    .eg-btn-2 {
-      width: 100%;
-      line-height: 44px;
-      height: 44px;
-      text-align: center;
-      margin-top: 25px;
-      font-size: 18px;
     }
 
     .type {
@@ -2619,7 +2780,7 @@ Details Sidebar Styles
             margin-bottom: 0;
           }
 
-          .rd-wrapper {
+          .styled-input {
             float: left;
             margin-right: 8px;
           }
@@ -2632,6 +2793,10 @@ Details Sidebar Styles
     }
 
     .grand-total {
+      @media @small {
+        float: left;
+      }
+      
       span {
         float: left;
         color: #000000;
@@ -2639,9 +2804,36 @@ Details Sidebar Styles
         line-height: 23px;
         font-size: 17px;
 
+        @media @small {
+          float: none;
+          display: block;
+          font-size: 15px;
+          line-height: normal;
+        }
+
         & + span {
           float: right;
           font-size: 27px;
+
+          @media @small {
+            float: none;
+            display: block;
+          }
+        }
+      }
+
+      & + .eg-btn-2 {
+        width: 100%;
+        line-height: 44px;
+        height: 44px;
+        text-align: center;
+        margin-top: 25px;
+        font-size: 18px;
+
+        @media @small {
+          float: right;
+          width: 193px;
+          margin: 0;
         }
       }
     }
@@ -2693,10 +2885,23 @@ Image Gallery Styles
       opacity: 0.6;
       position: relative;
       margin: 0 3px;
+      cursor: pointer;
+
+      @media @medium {
+        height: 45px;
+      }
+
+      @media @xs {
+        height: 15px;
+      }
 
       &.current {
         opacity: 1;
         border: 3px solid @green-1;
+
+        @media @xs {
+          border: 1px solid @green-1;
+        }
       }
     }
   }
