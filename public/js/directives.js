@@ -111,3 +111,46 @@ myapp.directive('imageGallery', [function() {
     }
   };
 }]);
+
+myapp.directive('uiSlider', [function() {
+  return {
+    restrict: 'EA',
+
+    scope: {
+      val: "=",
+      range: "@",
+      min: "=",
+      max: "=",
+      units: "@"
+    },
+
+    link: function(scope, element, attrs) {
+      var $slider = element.find('.ui-slider');
+      var $text = element.find('.text');
+
+      if (scope.range == 'true') {
+        $slider.slider({
+          range: true,
+          min: scope.min,
+          max: scope.max,
+          values: scope.val,
+          slide: function( event, ui ) {
+            $text.text(scope.units + ui.values[0] + " - " + scope.units + ui.values[ 1 ] );
+          }
+        });
+        $text.text(scope.units + $slider.slider("values", 0) + " - " + scope.units + $slider.slider("values", 1));
+      } else {
+        $slider.slider({
+          range: scope.range,
+          min: scope.min,
+          max: scope.max,
+          value: scope.val,
+          slide: function(event, ui) {
+            $text.text(ui.value + ' ' + scope.units);
+          }
+        });
+        $text.text($slider.slider('value') + ' ' + scope.units);
+      }
+    }
+  };
+}]);

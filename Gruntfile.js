@@ -36,8 +36,7 @@ module.exports = function(grunt) {
         'bower_components/bootstrap/dist/js/bootstrap.js',
         'bower_components/angular/angular.js',
         'public/js/app.js',
-        'public/js/directives.js',
-        'public/js/eventsGlue.js'
+        'public/js/directives.js'
         ],
         dest: 'public/js/main.js',
       }
@@ -55,8 +54,7 @@ module.exports = function(grunt) {
       js: {
         files: [
         'public/js/app.js',
-        'public/js/directives.js',
-        'public/js/eventsGlue.js'
+        'public/js/directives.js'
         ],
         tasks: ['concat:js', 'uglify:js']
       },
