@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Events Glue - Venue Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+  <link rel="stylesheet" href="public/styles/styles.css">
+</head>
+<body class="venues-page">
+  <header id="header" class="rainbow">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h1 class="logo"><a href="">EventsGlue</a></h1>
+          <ul class="header-top-links list-unstyled hide-s hide-xs">
+            <li><a href="">Sign In</a></li>
+            <li><a href="" class="eg-btn eg-btn-1">Register</a></li>
+          </ul>
+          <span class="trigger-mm show-s show-xs" data-toggle="collapse" data-target="#mobile-menu"><span></span></span>
+          <div id="search" class="hide-xs">
+            <form action="">
+              <input type="text" placeholder="Search for fun...">
+              <button><span class="glyphicon glyphicon-search"></span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav id="main-menu" class="hide-s hide-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="list-unstyled">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Venues</a></li>
+            <li><a href="">DS's</a></li>
+            <li><a href="">Bands</a></li>
+            <li><a href="">Limos / Party Buses</a></li>
+            <li><a href="">Photographers</a></li>
+            <li><a href="">Party Packages</a></li>
+            <li><a href="">More</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav id="mobile-menu" class="collapse">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="list-unstyled">
+            <li class="search hide-s show-xs">
+              <form action="">
+                <input type="text" placeholder="Search for fun...">
+                <button></button>
+              </form>
+            </li>
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Venues</a></li>
+            <li><a href="">DS's</a></li>
+            <li><a href="">Bands</a></li>
+            <li><a href="">Limos / Party Buses</a></li>
+            <li><a href="">Photographers</a></li>
+            <li><a href="">Party Packages</a></li>
+            <li><a href="">More</a></li>
+            <li class="links">
+              <a href="">Sign In</a>
+              <a href="" class="eg-btn eg-btn-1">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="breadcrumbs" class="top-line">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ol class="breadcrumb">
+            <li class="home"><a href="#">Home</a></li>
+            <li><a href="#">Venues</a></li>
+            <li><a href="#">Sub Category</a></li>
+            <li class="active">Data</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="venue-detail">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+          <div id="detail">
+            <div class="venue-ttl">
+              <h2>Quisque rhoncus lectus at augue</h2>
+              <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+              <div class="ribbon right new"><span>New</span></div>
+            </div>
+            <div class="overview">
+              <h4>Overview</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a laoreet elit, placerat vulputate erat. Fusce nulla libero, interdum quis vehicula eu, mattis quis metus. Vivamus ac diam pharetra, bibendum velit vel, rhoncus elit. Fusce venenatis purus in libero sollicitudin varius. Vestibulum a metus et risus porta hendrerit nec ac mauris. In eros augue, egestas vel lacinia eu, gravida a ligula. Phasellus ullamcorper id urna at porttitor. Quisque eget tempor neque, maximus varius nisl. Maecenas elementum vitae lorem sit amet mollis. Phasellus congue eu enim quis elementum. Nunc eu aliquam sem, ac ullamcorper urna. Fusce in lacus sed sem consectetur pellentesque sit amet nec odio. Maecenas molestie, ipsum a laoreet dapibus, neque felis tempor erat, nec egestas ligula enim sed nisi. Mauris sodales imperdiet nunc, eu consectetur dui sagittis in. Maecenas elementum vitae lorem sit amet mollis.</p>
+            </div>
+            <div class="room-types">
+              <h4>Room Types</h4>
+              <div class="room">
+                <img src="public/images/room.png" alt="">
+                <div>
+                  <h5>SAPPHIRE ROOM</h5>
+                  <div class="meta-data">
+                    <span class="seated">200</span>
+                    <span class="standing">100</span>
+                  </div>
+                  <h6>Includes</h6>
+                  <ul class="list-unstyled">
+                    <li>300 sqft of party space</li>
+                    <li>Large LED lit dome</li>
+                    <li>Floor to ceiling windows</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="room">
+                <img src="public/images/room.png" alt="">
+                <div>
+                  <h5>SAPPHIRE ROOM</h5>
+                  <div class="meta-data">
+                    <span class="seated">200</span>
+                    <span class="standing">100</span>
+                  </div>
+                  <h6>Includes</h6>
+                  <ul class="list-unstyled">
+                    <li>300 sqft of party space</li>
+                    <li>Large LED lit dome</li>
+                    <li>Floor to ceiling windows</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="location">
+              <h4>Location</h4>
+              <img src="public/images/detail-map.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+          <aside id="detail-sidebar">
+            <div class="widget">
+              <div class="widget-price clearfix">
+                <span class="from">From Only</span>
+                <span class="price"><sup>$</sup>79 <span>/person</span></span>
+              </div>
+              <div class="clearfix">
+                <h6>When is your party?</h6>
+                <input class="when-input" id="calendar-aside" type="text" placeholder="26/04/2015">
+                <a href="javascript:void(0);" onclick="$.datepicker._showDatepicker($('#calendar-aside')[0]);" class="calendar-trigger"></a>
+              </div>
+              <div class="clearfix">
+                <h6>What time is your party?</h6>
+                <div class="select-wrapper time">
+                  <select>
+                    <option value="">12:30</option>
+                  </select>
+                </div>
+                <div class="select-wrapper type">
+                  <select>
+                    <option value="">AM</option>
+                    <option value="">PM</option>
+                  </select>
+                </div>
+              </div>
+              <div class="clearfix">
+                <h6>How long is your party?</h6>
+                <div class="ui-slider long-slider"></div>
+                <span class="sliders-text">
+                  <span class="long-text"></span>
+                </span>
+              </div>
+              <div class="clearfix">
+                <h6>How many guests?</h6>
+                <div class="ui-slider guests-slider-aside"></div>
+                <span class="sliders-text">
+                  <span class="guests-text"></span>
+                </span>
+              </div>
+              <div class="clearfix">
+                <h6>Room Type</h6>
+                <div class="type">
+                  <ul class="list-unstyled">
+                    <li>
+                      <div class="rd-wrapper">
+                        <input type="radio" name="radio1" checked="checked" id="rd1">
+                        <label for="rd1"></label>
+                      </div>
+                      Sapphire Room
+                      <span>$59/pp</span>
+                    </li>
+                    <li>
+                      <div class="rd-wrapper">
+                        <input type="radio" name="radio1" id="rd2">
+                        <label for="rd2"></label>
+                      </div>
+                      Crystal Room
+                      <span>$69/pp</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearfix">
+                <div class="grand-total clearfix">
+                  <span>Grand Total</span>
+                  <span>$11,800</span>
+                </div>
+                <a href="" class="eg-btn eg-btn-2">Book Now</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="container rainbow-smaller">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div id="footer-top">
+            <div class="footer-top_text">
+              <h1 class="logo"><a href="">EventsGlue</a></h1>
+              <p>Events Glu lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere eu dui sodales ullamcorper. Suspendisse potenti. Aliquam dictum viverra felis hendrerit efficitur</p>
+            </div>
+            <div class="footer-top_link hide-xs">
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Company</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About Party Up</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Press</a></li>
+                  <li><a href="">Investors Relations</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="footer-bottom">
+            <div class="footer-bottom_subscribe">
+              <h4>Get the Latest news &amp; production updates</h4>
+              <div>
+                <input type="text" placeholder="Enter you email address">
+                <button class="eg-btn eg-btn-1">Subscribe</button>
+              </div>
+            </div>
+            <div class="footer-bottom_social hide-xs">
+              <h4>we are social</h4>
+              <ul class="list-unstyled social">
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Vimeo</a></li>
+                <li><a href="">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="footer-info">
+            <p>&copy; 2014 Event Glu, Inc. All Rights Reserved.</p>
+            <ul class="list-unstyled">
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="public/js/main.js"></script>
+</body>
+</html>
