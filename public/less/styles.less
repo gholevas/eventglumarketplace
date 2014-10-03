@@ -32,6 +32,7 @@ Variables
 @gray-24: #363636;
 @gray-25: #555555;
 @gray-26: #eaeae5;
+@gray-27: #eeeeee;
 @green-1: #83c23f;
 @green-2: #72a936;
 @black-transparent: rgba(0, 0, 0, 0.5);
@@ -2449,6 +2450,8 @@ Venue Details
       position: relative;
       height: 100px;
       padding: 27px 43px 0 43px;
+      margin-bottom: 0 !important;
+      border-bottom: none !important;
 
       h2 {
         color: #000000;
@@ -2641,6 +2644,89 @@ Details Sidebar Styles
           font-size: 27px;
         }
       }
+    }
+  }
+}
+
+/***************************
+****************************
+Image Gallery Styles
+****************************
+***************************/
+
+.image-gallery {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  position: relative;
+  padding: 0 !important;
+
+  .image-wrapper {
+    position: relative;
+    
+    .big-image {
+      width: 100%;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: @gray-27;
+      font-size: 13px;
+      padding: 15px 50px;
+      width: 100%;
+    }
+  }
+
+  > .carousel {
+    background-color: @gray-27;
+    padding: 7px 0;
+  }
+  
+  .item {
+    text-align: center;
+
+    img {
+      display: inline-block;
+      height: 58px;
+      opacity: 0.6;
+      position: relative;
+      margin: 0 3px;
+
+      &.current {
+        opacity: 1;
+        border: 3px solid @green-1;
+      }
+    }
+  }
+
+  .control-left, 
+  .control-right {
+    display: block;
+    width: 12px;
+    height: 19px;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+  }
+
+  .control-left {
+    background: url("../images/arrow-5.png") no-repeat 0 0;
+    left: 25px;
+
+    &:hover {
+      background-position: 0 -19px;
+    }
+  }
+
+  .control-right {
+    background: url("../images/arrow-5.png") no-repeat 0 -38px;
+    right: 25px;
+
+    &:hover {
+      background-position: 0 -57px;
     }
   }
 }

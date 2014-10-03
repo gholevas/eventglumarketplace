@@ -64,3 +64,48 @@ myapp.directive('uiCalendar', [function() {
     }
   };
 }]);
+
+myapp.directive('imageGallery', [function() {
+  return {
+    restrict: 'EA',
+
+    link: function(scope, element, attrs) {
+      var $carousel = element.find('.carousel');
+      var $imgs = element.find('.item img');
+      var $caption = element.find('.caption');
+      var $bigImage = element.find('.big-image');
+
+      $carousel.on('slid.bs.carousel', function(e) {
+        var direction = e.direction;
+        var $currentItem = element.find('.active');
+        $imgs.removeClass('current');
+
+        var $newImgs = $currentItem.find('img');
+
+        if (direction == 'left')
+          position = 0;
+        else
+          position = $newImgs.length - 1;
+
+        $($newImgs[position]).addClass('current');
+        $caption.html($($newImgs[position]).attr('alt'));
+      });
+
+      $($imgs[0]).addClass('current');
+      $caption.html($($imgs[0]).attr('alt'));
+      var src = $($imgs[0]).attr('src');
+      $bigImage.attr('src', src);
+
+      $imgs.on('click', function() {
+        $imgs.removeClass('current');
+        $(this).addClass('current');
+        
+        var src = $(this).attr('src');
+        var caption = $(this).attr('alt');
+        
+        $caption.html(caption);
+        $bigImage.attr('src', src);
+      });
+    }
+  };
+}]);
