@@ -154,3 +154,22 @@ myapp.directive('uiSlider', [function() {
     }
   };
 }]);
+
+myapp.directive('checkItem', [function() {
+  return {
+    restrict: 'EA',
+
+    link: function(scope, element, attrs) {
+      var $checkboxes = element.find('input[type="checkbox"]');
+
+      $checkboxes.on('change', function() {
+        var $item = $(this).parent().parent();
+
+        if ($(this).is(':checked')) 
+          $item.addClass('active');
+        else 
+          $item.removeClass('active');
+      });
+    }
+  };
+}]);

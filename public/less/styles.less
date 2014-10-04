@@ -34,8 +34,11 @@ Variables
 @gray-26: #eaeae5;
 @gray-27: #eeeeee;
 @gray-28: #ecece8;
+@gray-29: #1e1e1e;
+@gray-30: #ececec;
+@gray-31: #fafafa;
 @green-1: #83c23f;
-@green-2: #72a936;
+@green-2: #78b13a;
 @black-transparent: rgba(0, 0, 0, 0.5);
 @white-transparent: rgba(255, 255, 255, 0.6);
 @white-transparent-2: rgba(255, 255, 255, 0.3);
@@ -70,7 +73,6 @@ Fonts
   url('../fonts/proximanova-sbold-webfont.svg#proxima_novasemibold') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 /***************************
@@ -82,6 +84,10 @@ General Styles
 body {
   font-family: @arial;
   background-color: @gray-10;
+}
+
+body.white {
+  background-color: #FFFFFF;
 }
 
 a {
@@ -101,6 +107,8 @@ input {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: normal;
+  font-family: 'proxima_novasemibold';
+  font-weight: normal;
 }
 
 .show-xs,
@@ -257,13 +265,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 100%;
 
   input[type="radio"],
-  input[type="check"] {
+  input[type="checkbox"] {
     float: none;
     margin: 0;
     visibility: hidden;
   }
 
-  input[type="check"] {
+  input[type="checkbox"] {
     &:checked + label {
       background: url("../images/check-1.png") no-repeat 50% 50% @green-1;
     }
@@ -1034,7 +1042,6 @@ Tiles Styles
 
   h4 {
     font-size: 19px;
-    font-weight: bold;
     line-height: 26px;
     margin-bottom: 10px;
   }
@@ -1230,7 +1237,6 @@ Flash Deals Styles
     font-size: 22px;
     color: @gray-6;
     text-transform: uppercase;
-    font-weight: bold;
     float: left;
 
     &.tag {
@@ -1430,7 +1436,6 @@ Footer Styles
         padding-left: 28px;
         
         h6 {
-          font-weight: bold;
           line-height: 25px;
         }
 
@@ -1979,7 +1984,6 @@ Sidebar Styles
     h6 {
       color: @gray-6;
       font-size: 14px;
-      font-weight: normal;
       margin-bottom: 15px;
     }
 
@@ -2538,7 +2542,6 @@ Venue Details
       h2 {
         color: #000000;
         font-size: 20px;
-        font-weight: bold;
         line-height: 24px;
         margin-bottom: 7px;
       }
@@ -2681,7 +2684,6 @@ Venue Details
 
     h5 {
       color: @gray-24;
-      font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
@@ -2969,6 +2971,283 @@ Image Gallery Styles
 
     &:hover {
       background-position: 0 -57px;
+    }
+  }
+}
+
+/***************************
+****************************
+Event Title Styles
+****************************
+***************************/
+
+#event-title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+  
+  .eveng-bg {
+    height: 194px;
+    background: url("../images/event-image.jpg") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
+  }
+
+  h1 {
+    margin-top: 60px;
+    font-size: 49px;
+    text-transform: uppercase;
+    line-height: normal;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+/***************************
+****************************
+Customize Steps Styles
+****************************
+***************************/
+
+#customize-steps {
+  background: url("../images/bg-customize.png") no-repeat scroll 50% 0 rgba(0, 0, 0, 0);
+  border-bottom: 1px solid @gray-19;
+  font-family: proxima_novasemibold;
+  font-weight: 400;
+  padding-bottom: 15px;
+  padding-top: 35px;
+  text-transform: uppercase;
+
+  h3 {
+    color: @gray-29;
+    line-height: 29px;
+    font-size: 29px;
+    overflow: hidden;
+    float: left;
+
+    .number {
+      background-color: @green-1;
+      color: #FFFFFF;
+      float: left;
+      margin-right: 9px;
+    }
+  }
+
+  ul {
+    float: right;
+    margin-bottom: 0;
+
+    li {
+      color: @gray-20;
+      float: left;
+      font-size: 13px;
+      position: relative;
+      text-align: center;
+      width: 95px;
+      line-height: 29px;
+
+      .number {
+        bottom: -29px;
+        left: 50%;
+        margin-left: -15px;
+        position: absolute;
+      }
+
+      &.active {
+        color: @gray-29;
+
+        .number {
+          background-color: @green-1;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+.number {
+  background-color: @gray-19;
+  color: @gray-20;
+  display: block;
+  height: 29px;
+  width: 29px;
+  line-height: 29px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  border-radius: 100%;
+}
+
+/***************************
+****************************
+Customize Options Styles
+****************************
+***************************/
+
+#customize-option {
+  padding: 25px 0;
+
+  h4 {
+    color: @gray-6;
+    font-size: 15px;
+    border-bottom: 1px solid @gray-30;
+    line-height: 48px;
+  }
+
+  #options {
+    .options-trigger {
+      background: url("../images/arrow-6.png") no-repeat 0 center;
+      font-family: 'proxima_novasemibold';
+      display: block;
+      color: @gray-24;
+      text-transform: uppercase;
+      padding-left: 24px;
+      line-height: 48px;
+      font-size: 16px;
+
+      &.collapsed {
+        background: url("../images/arrow-7.png") no-repeat 0 center;
+      }
+    }
+
+    div.collapse {
+      padding-bottom: 25px;
+      border-bottom: 1px solid @gray-30;
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+      }
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        overflow: hidden;
+        padding: 9px 24px;
+        position: relative;
+        color: @gray-24;
+
+        &:hover,
+        &.active {
+          background-color: @gray-31
+        }
+
+        > * {
+          float: left;
+        }
+
+        .styled-input {
+          position: absolute;
+          left: 24px;
+          top: 50%;
+          margin-top: -10px;
+        }
+
+        >img {
+          border-radius: 100%;
+          margin-left: 34px;
+          width: 48px;
+        }
+
+        >span {
+          float: right;
+          line-height: 48px;
+        }
+
+        .option-info {
+          margin-left: 21px;;
+
+          span {
+            display: block;
+          }
+
+          a {
+            color: @green-1;
+            display: inline-block;
+            margin-right: 18px;
+
+            &:hover {
+              color: @green-2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Steps Sidebar
+****************************
+***************************/
+
+#steps-sidebar {
+  border: 5px solid @eg-purple;
+
+  h5 {
+    color: @eg-purple;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  > div {
+    padding: 15px 25px;
+    border-bottom: 1px solid @gray-10;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h6 {
+      color: #000000;
+      font-size: 13px;
+      text-transform: uppercase;
+      line-height: 26px
+    }
+
+    ul {
+      margin-bottom: 0;
+
+      li {
+        line-height: 22px;
+        font-size: 13px;
+        overflow: hidden;
+
+        span {
+          float: right;
+        }
+      }
+    }
+
+    .total {
+      color: #000000;
+      font-size: 16px;
+      font-family: 'proxima_novasemibold';
+      overflow: hidden;
+
+      span {
+        display: block;
+        overflow: hidden;
+        float: left;
+        line-height: 26px;
+        
+        & + span {
+          float: right;
+        }
+      }
+    }
+
+    .eg-btn-2 {
+      width: 100%;
+      text-align: center;
+      height: 44px;
+      line-height: 44px;
+      font-size: 17px;
+      margin-top: 15px;
     }
   }
 }
