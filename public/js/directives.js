@@ -173,3 +173,19 @@ myapp.directive('checkItem', [function() {
     }
   };
 }]);
+
+myapp.directive('resetTab', [function() {
+  return {
+    restrict: 'EA',
+
+    link: function(scope, element, attrs) {
+      var $tabs = element.find('.details-extras-tabs');
+      element.on('hidden.bs.modal', function (e) {
+        if (element.hasClass('dt-modal'))
+          $tabs.find('a:first').tab('show');
+        else if (element.hasClass('ex-modal'))
+          $tabs.find('a:last').tab('show');
+      });
+    }
+  };
+}]);
