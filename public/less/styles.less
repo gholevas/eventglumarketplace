@@ -37,6 +37,9 @@ Variables
 @gray-29: #1e1e1e;
 @gray-30: #ececec;
 @gray-31: #fafafa;
+@gray-32: #252525;
+@gray-33: #f8f8f7;
+@gray-34: #e3e3e3;
 @green-1: #83c23f;
 @green-2: #78b13a;
 @black-transparent: rgba(0, 0, 0, 0.5);
@@ -2996,10 +2999,18 @@ Event Title Styles
     font-size: 49px;
     text-transform: uppercase;
     line-height: normal;
+
+    @media @xs {
+      font-size: 30px;
+    }
   }
 
   p {
     font-size: 20px;
+
+    @media @xs {
+      font-size: 16px;
+    }
   }
 }
 
@@ -3037,6 +3048,11 @@ Customize Steps Styles
     float: right;
     margin-bottom: 0;
 
+    @media @xs {
+      float: none;
+      width: 100%;
+    }
+
     li {
       color: @gray-20;
       float: left;
@@ -3045,6 +3061,10 @@ Customize Steps Styles
       text-align: center;
       width: 95px;
       line-height: 29px;
+
+      @media @xs {
+        width: 33.33%;
+      }
 
       .number {
         bottom: -29px;
@@ -3092,6 +3112,11 @@ Customize Options Styles
     font-size: 15px;
     border-bottom: 1px solid @gray-30;
     line-height: 48px;
+
+    @media @xs {
+      line-height: 23px;
+      padding: 5px 0;
+    }
   }
 
   #options {
@@ -3160,7 +3185,11 @@ Customize Options Styles
         .option-info {
           margin-left: 21px;;
 
-          span {
+          @media @xs {
+            margin-left: 8px;
+          }
+
+          > span {
             display: block;
           }
 
@@ -3171,6 +3200,17 @@ Customize Options Styles
 
             &:hover {
               color: @green-2;
+            }
+
+            @media @xs {
+              margin: 0;
+              font-size: 18px;
+            }
+
+            @media @xs {
+              span {
+                display: none;
+              }
             }
           }
         }
@@ -3186,7 +3226,8 @@ Steps Sidebar
 ***************************/
 
 #steps-sidebar {
-  border: 5px solid @eg-purple;
+  border: 5px solid #9868ae;
+  margin-top: 10px;
 
   h5 {
     color: @eg-purple;
@@ -3248,6 +3289,143 @@ Steps Sidebar
       line-height: 44px;
       font-size: 17px;
       margin-top: 15px;
+
+      @media @medium {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Extras Modal
+****************************
+***************************/
+
+.extras-details-modal {
+  .modal-dialog {
+    background-color: @gray-33;
+    box-shadow: @light-shadow;
+    
+    header {
+      background: url("../images/bg-extras-modal.jpg") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
+      height: 114px;
+      position: relative;
+
+      .close-modal {
+        background: url("../images/bg-close.png") no-repeat scroll 0 0 transparent;
+        border: medium none;
+        border-radius: 100%;
+        box-shadow: 0 0 6px -4px #000;
+        display: block;
+        height: 42px;
+        position: absolute;
+        right: -21px;
+        text-indent: -9999px;
+        top: -21px;
+        width: 42px;
+      }
+    }
+
+    .extras-modal_container {
+      h3 {
+        line-height: 60px;
+        padding: 0 39px;
+        text-transform: uppercase;
+        color: @gray-32;
+        font-size: 18px;
+      }
+
+      .extras-modal_container__info {
+        > ul {
+          margin: 0;
+          overflow: hidden;
+
+          li {
+            float: left;
+            width: 50%;
+            text-align: center;
+            font-family: 'proxima_novasemibold';
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            border-bottom: 1px solid @gray-34;
+
+            a {
+              color: @gray-20;
+              line-height: 50px;
+              display: block;
+            }
+
+            &.active {
+              background-color: #FFFFFF;
+              border-top: 1px solid @gray-34;
+              border-bottom: 1px solid #FFFFFF;
+
+              &:first-child {
+                border-right: 1px solid @gray-34;
+              }
+
+              &:last-child {
+                border-left: 1px solid @gray-34;
+              }
+
+              a {
+                color: @green-1
+              }
+            }
+          }
+        }
+
+        .extras-modal_container__info___content {
+          background-color: #FFFFFF;
+          padding: 20px 39px;
+
+          ul {
+            margin: 0;
+            overflow: hidden;
+
+            li {
+              color: @gray-24;
+              font-size: 13px;
+              overflow: hidden;
+              margin-bottom: 11px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .styled-input {
+                float: left;
+                margin-right: 10px;
+              }
+
+              span {
+                float: right;
+                width: 50%;
+                text-align: center;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      footer {
+        background-color: #FFFFFF;
+        border-top: 1px solid @gray-34;
+        padding: 20px 39px;
+        overflow: hidden;
+
+        .eg-btn-2 {
+          float: left;
+          height: 37px;
+          line-height: 37px;
+          text-align: center;
+          width: 162px;
+          font-size: 16px;
+        }
+      }
     }
   }
 }
