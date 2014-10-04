@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="eventsGlue">
 <head>
-  <title>Events Glue - Customize Event</title>
+  <title>Events Glue - Checkout</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
@@ -90,179 +90,181 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h3 class="hide-xs"><span class="number">1</span> customize event</h3>
+          <h3 class="hide-xs"><span class="number">1</span> checkout</h3>
           <ul class="list-unstyled clearfix">
-            <li class="active">customize<span class="number">1</span></li>
-            <li>checkout<span class="number">2</span></li>
+            <li>customize<span class="number">1</span></li>
+            <li class="active">checkout<span class="number">2</span></li>
             <li>confirmation<span class="number">3</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
-  <section id="customize-option">
+  <section id="checkout-login">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h4>Please enter your details below to complete your purchase</h4>
+          
+          <form class="form-inline login-form" role="form">
+            <div class="form-group">
+              <label for="">Email Address <span>*</span></label>
+              <input class="form-control" type="email" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <label for="">Password <span>*</span></label>
+              <input class="form-control" type="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label class="hide-xs">&nbsp;</label>
+              <button type="submit" class="eg-btn eg-btn-1">Login</button>
+            </div>
+            <div class="form-group">
+              <label class="hide-xs">&nbsp;</label>
+              <a href="">Forgot your password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="checkout-form">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-          <h4>Please enter your details below to complete your purchase</h4>
-          <div id="options">
-            <a class="options-trigger" data-toggle="collapse" data-parent="#options" href="#options-group-1">SELECT A food option</a>
-            <div id="options-group-1" class="collapse in">
-              <ul class="list-unstyled" check-item>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check1" name="check1">
-                    <label for="check1"></label>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <h3>Billing Address</h3>
+              <div class="double clearfix">
+                <div class="form-group">
+                  <label for="">First Name <span>*</span></label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="">Last Name <span>*</span></label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Email-mail <span>*</span></label>
+                <input type="email" class="form-control">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Create Account
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="">Address <span>*</span></label>
+                <input type="text" class="form-control">
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="">Country <span>*</span></label>
+                <div class="select-wrapper sel-checkout">
+                  <select>
+                    <option>United States</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">City <span>*</span></label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="double clearfix">
+                <div class="form-group">
+                  <label for="">Zip/Postal Code <span>*</span></label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="">State/Province <span>*</span></label>
+                  <div class="select-wrapper sel-checkout">
+                    <select>
+                      <option>- Select -</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check3" name="check3">
-                    <label for="check3"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check4" name="check4">
-                    <label for="check4"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-              </ul>
+                </div>
+              </div>
+              <div class="double clearfix">
+                <div class="form-group">
+                  <label for="">Telephone <span>*</span></label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="">Fax</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
             </div>
-            <a class="options-trigger collapsed" data-toggle="collapse" data-parent="#options" href="#options-group-2">SELECT A DRINK option</a>
-            <div id="options-group-2" class="collapse">
-              <ul class="list-unstyled" check-item>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check1" name="check1">
-                    <label for="check1"></label>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 method">
+              <h3>Payment Method</h3>
+              <div class="form-group">
+                <div class="ccs clearfix">
+                  <img src="public/images/cc-1.png" alt="">
+                  <img src="public/images/cc-2.png" alt="">
+                  <img src="public/images/cc-3.png" alt="">
+                  <img src="public/images/cc-4.png" alt="">
+                  <img src="public/images/cc-5.png" alt="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Name on Card <span>*</span></label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="">Credit Card Type <span>*</span></label>
+                <div class="select-wrapper sel-checkout">
+                  <select>
+                    <option>- Please Select -</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Credict Card Number <span>*</span></label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="double date clearfix">
+                <label for="">Expiration Date <span>*</span></label>
+                <div class="form-group">
+                  <div class="select-wrapper sel-checkout">
+                    <select>
+                      <option>- Month -</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
+                </div>
+                <div class="form-group">
+                  <div class="select-wrapper sel-checkout">
+                    <select>
+                      <option>- Year -</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check2" name="check2">
-                    <label for="check2"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check3" name="check3">
-                    <label for="check3"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check4" name="check4">
-                    <label for="check4"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-              </ul>
-            </div>
-            <a class="options-trigger collapsed" data-toggle="collapse" data-parent="#options" href="#options-group-3">ADD-ONS</a>
-            <div id="options-group-3" class="collapse">
-              <ul class="list-unstyled" check-item>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check1" name="check1">
-                    <label for="check1"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check2" name="check2">
-                    <label for="check2"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check3" name="check3">
-                    <label for="check3"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-                <li>
-                  <div class="styled-input">
-                    <input type="checkbox" id="check4" name="check4">
-                    <label for="check4"></label>
-                  </div>
-                  <img src="public/images/option.jpg" alt="">
-                  <div class="option-info">
-                    <span>Buffet</span>
-                    <a href="" data-toggle="modal" data-target="#details-modal"><i class="glyphicon glyphicon-eye-open"></i> <span>See Details</span></a>
-                    <a href="" data-toggle="modal" data-target="#extras-modal"><i class="glyphicon glyphicon-star"></i> <span>Add Extras</span></a>
-                  </div>
-                  <span>Included</span>
-                </li>
-              </ul>
+                </div>
+              </div>
+              <div class="form-group small clearfix">
+                <label for="">Card Verification Number <span>*</span></label>
+                <input type="text" class="form-control">
+                <a href="">What is this?</a>
+              </div>
             </div>
           </div>
         </div>
@@ -272,7 +274,6 @@
               <h5>Summary</h5>
             </div>
             <div>
-              <h6>Venue Details</h6>
               <ul class="list-unstyled">
                 <li>Central Lounge <span>$2,584</span></li>
                 <li>Sapphire Room</li>
@@ -282,19 +283,16 @@
               </ul>
             </div>
             <div>
-              <h6>Food</h6>
               <ul class="list-unstyled">
                 <li>Premium Buffet <span>$750</span></li>
               </ul>
             </div>
             <div>
-              <h6>Drinks</h6>
               <ul class="list-unstyled">
                 <li>Cash Bar <span>Included</span></li>
               </ul>
             </div>
             <div>
-              <h6>Add Ons</h6>
               <ul class="list-unstyled">
                 <li>Vianese Table <span>$900</span></li>
               </ul>
@@ -304,8 +302,16 @@
                 <span>TOTAL</span>
                 <span>$4,234</span>
               </div>
-              <a href="" class="eg-btn eg-btn-2"><span class="hide-s hide-xs">process to </span>checkout</a>
             </div>
+            <div>
+              <ul class="list-unstyled">
+                <li>Coupon Code</li>
+                <li>
+                  <input type="text">
+                </li>
+              </ul>
+            </div>
+            <div><a href="" class="eg-btn eg-btn-2">Place Order</a></div>
           </div>
         </div>
       </div>
