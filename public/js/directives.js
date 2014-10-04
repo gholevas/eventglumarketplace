@@ -154,3 +154,38 @@ myapp.directive('uiSlider', [function() {
     }
   };
 }]);
+
+myapp.directive('checkItem', [function() {
+  return {
+    restrict: 'EA',
+
+    link: function(scope, element, attrs) {
+      var $checkboxes = element.find('input[type="checkbox"]');
+
+      $checkboxes.on('change', function() {
+        var $item = $(this).parent().parent();
+
+        if ($(this).is(':checked')) 
+          $item.addClass('active');
+        else 
+          $item.removeClass('active');
+      });
+    }
+  };
+}]);
+
+myapp.directive('resetTab', [function() {
+  return {
+    restrict: 'EA',
+
+    link: function(scope, element, attrs) {
+      var $tabs = element.find('.details-extras-tabs');
+      element.on('hidden.bs.modal', function (e) {
+        if (element.hasClass('dt-modal'))
+          $tabs.find('a:first').tab('show');
+        else if (element.hasClass('ex-modal'))
+          $tabs.find('a:last').tab('show');
+      });
+    }
+  };
+}]);
