@@ -3,7 +3,7 @@
 <head>
   <title>Events Glue</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
   <link rel="stylesheet" href="public/styles/styles.css">
 </head>
@@ -82,23 +82,23 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div id="categories-search-tabs">
+          <div id="categories-search-tabs" enable-swap>
             <ul class="list-unstyled hide-xs" role="tablist">
-              <li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><span><i></i></span>Venues</a></li>
-              <li><a href="#tab-2" role="tab" data-toggle="tab"><span><i></i></span>DJ's</a></li>
-              <li><a href="#tab-3" role="tab" data-toggle="tab"><span><i></i></span>Bands</a></li>
-              <li><a href="#tab-4" role="tab" data-toggle="tab"><span><i></i></span>Transfers</a></li>
-              <li><a href="#tab-5" role="tab" data-toggle="tab"><span><i></i></span>Packages</a></li>
+              <li class="active"><a href="#tab-1" role="tab" data-toggle="tab" data-index="1"><span><i></i></span>Venues</a></li>
+              <li><a href="#tab-2" role="tab" data-toggle="tab" data-index="2"><span><i></i></span>DJ's</a></li>
+              <li><a href="#tab-3" role="tab" data-toggle="tab" data-index="3"><span><i></i></span>Bands</a></li>
+              <li><a href="#tab-4" role="tab" data-toggle="tab" data-index="4"><span><i></i></span>Transfers</a></li>
+              <li><a href="#tab-5" role="tab" data-toggle="tab" data-index="5"><span><i></i></span>Packages</a></li>
             </ul>
             <div class="tab-content">
-              <div class="tab-pane active pane-1" id="tab-1">
+              <div class="tab-pane active pane-1" id="tab-1" data-index="1">
                 <form action="">
                   <div class="tab-ttl show-xs">
                     <span><i></i></span>Venues
                   </div>
                   <div class="form-set clearfix">
                     <label for="">Where is your party?</label>
-                    <input type="text" placeholder="Search for City, State or Zip Code">
+                    <input type="text" placeholder="City, State or Zip Code">
                   </div>
                   <div class="form-set clearfix">
                     <div>
@@ -138,7 +138,7 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane pane-2" id="tab-2">
+              <div class="tab-pane pane-2" id="tab-2" data-index="2">
                 <form action="">
                   <div class="tab-ttl show-xs">
                     <span><i></i></span>DJ's
@@ -185,7 +185,7 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane pane-3" id="tab-3">
+              <div class="tab-pane pane-3" id="tab-3" data-index="3">
                 <form action="">
                   <div class="tab-ttl show-xs">
                     <span><i></i></span>Bands
@@ -232,7 +232,7 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane pane-4" id="tab-4">
+              <div class="tab-pane pane-4" id="tab-4" data-index="4">
                 <form action="">
                   <div class="tab-ttl show-xs">
                     <span><i></i></span>Transfers
@@ -279,7 +279,7 @@
                   <button class="eg-btn eg-btn-1">Search Venues</button>
                 </form>
               </div>
-              <div class="tab-pane pane-5" id="tab-5">
+              <div class="tab-pane pane-5" id="tab-5" data-index="5">
                 <form action="">
                   <div class="tab-ttl show-xs">
                     <span><i></i></span>Packages
@@ -328,11 +328,11 @@
               </div>
             </div>
             <ul class="list-unstyled small-tabs show-xs" role="tablist">
-              <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Venues</a></li>
-              <li><a href="#tab-2" role="tab" data-toggle="tab">DJ's</a></li>
-              <li><a href="#tab-3" role="tab" data-toggle="tab">Bands</a></li>
-              <li><a href="#tab-4" role="tab" data-toggle="tab">Transfers</a></li>
-              <li><a href="#tab-5" role="tab" data-toggle="tab">Packages</a></li>
+              <li class="active"><a href="#tab-1" role="tab" data-toggle="tab" data-index="1">Venues</a></li>
+              <li><a href="#tab-2" role="tab" data-toggle="tab" data-index="2">DJ's</a></li>
+              <li><a href="#tab-3" role="tab" data-toggle="tab" data-index="3">Bands</a></li>
+              <li><a href="#tab-4" role="tab" data-toggle="tab" data-index="4">Transfers</a></li>
+              <li><a href="#tab-5" role="tab" data-toggle="tab" data-index="5">Packages</a></li>
             </ul>
           </div>
         </div>
@@ -343,7 +343,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div id="featured-carousel" class="featured-carousel carousel slide bordered hide-s hide-xs" data-ride="carousel" data-interval="false">
+          <div id="featured-carousel" class="featured-carousel carousel slide bordered hide-s hide-xs" data-ride="carousel">
             <div class="shadow"></div>
             <div class="carousel-inner">
               <div class="item active">
@@ -1114,6 +1114,10 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
   <script src="public/js/main.js"></script>
 </body>
 </html>

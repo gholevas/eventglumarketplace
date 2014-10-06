@@ -160,9 +160,17 @@ myapp.directive('checkItem', [function() {
     restrict: 'EA',
 
     link: function(scope, element, attrs) {
-      var $checkboxes = element.find('input[type="checkbox"]');
+      var $radios = element.find('input[type="radio"]');
+      var $lis = element.find('li');
 
-      $checkboxes.on('change', function() {
+      angular.forEach($radios, function (radio, i) {
+        var rd = $(radio);
+        if (rd.is(':checked'))
+          rd.parent().parent().addClass('active');
+      });
+
+      $radios.on('change', function() {
+        $lis.removeClass('active');
         var $item = $(this).parent().parent();
 
         if ($(this).is(':checked')) 
@@ -207,6 +215,35 @@ myapp.directive('switchGrid', [function() {
 
         if (scope.grid == 'square') $tiles.addClass('square');
         else $tiles.removeClass('square');
+      });
+    }
+  };
+}]);
+
+myapp.directive('enableSwap', [function() {
+  return {
+    restrict: 'EA',
+
+    link: function(scope, element, attrs) {
+      var $panes = element.find('.tab-pane');
+      var $tabList = element.find('>ul');
+
+      $panes.swiperight(function() {
+        var index = $(this).attr('data-index') * 1;
+        
+        if (index == 1)
+          element.find('ul a[data-index="' + $panes.length + '"]').tab('show');
+        else
+          element.find('ul a[data-index="' + (index - 1) + '"]').tab('show');
+      });
+
+      $panes.swipeleft(function() {
+        var index = $(this).attr('data-index') * 1;
+
+        if (index == $panes.length)
+          element.find('ul a[data-index="1"]').tab('show');
+        else
+          element.find('ul a[data-index="' + (index + 1) + '"]').tab('show');
       });
     }
   };
