@@ -1406,6 +1406,14 @@ Footer Styles
   &.darker {
     background-color: @gray-35;
 
+    .footer-top_text {
+      .logo {
+        a {
+          background: url("../images/logo-gray.png") no-repeat 0 0;
+        }
+      }
+    }
+
     #footer-bottom {
       .footer-bottom_subscribe {
         div {
@@ -1444,10 +1452,6 @@ Footer Styles
 
       .logo {
         margin-bottom: 15px;
-
-        a {
-          background: url("../images/logo-gray.png") no-repeat 0 0;
-        }
 
         @media @xs {
           a {
