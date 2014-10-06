@@ -28,13 +28,9 @@ module.exports = function(grunt) {
       },
       js: {
         src: [
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/jquery-ui/jquery-ui.min.js',
         'bower_components/jquery-ui/ui/widget.js',
         'bower_components/jquery-ui/ui/mouse.js',
         'public/js/lib/jquery.ui.touch-punch.min.js',
-        'bower_components/bootstrap/dist/js/bootstrap.js',
-        'bower_components/angular/angular.js',
         'public/js/app.js',
         'public/js/directives.js'
         ],
