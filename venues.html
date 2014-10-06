@@ -91,8 +91,8 @@
               <div class="grids">
                 <span>View</span>
                 <ul class="list-unstyled">
-                  <li class="active"><a href="">Grid 1</a></li>
-                  <li><a href="">Grid 2</a></li>
+                  <li class="active"><span grid="list" switch-grid>List</span></li>
+                  <li><span grid="square" switch-grid>Square</span></li>
                 </ul>
               </div>
               <div class="pages">
@@ -291,7 +291,35 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
           <div id="venues-wrapper">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled clearfix">
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
+              <li class="tile">
+                <div class="img-wrapper">
+                  <img src="public/images/venue-image.png" alt="">
+                  <div class="ribbon new"><span>New</span></div>
+                </div>
+                <div class="text-wrapper">
+                  <h4>Quisque rhoncus lectus at augue</h4>
+                  <span><i class="glyphicon glyphicon-map-marker"></i> San Francisco, CA</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit felis, varius a convallis eget.</p>
+                  <div class="meta-data">
+                    <span class="price">$59 <span>/person</span></span>
+                  </div>
+                </div>
+              </li>
               <li class="tile">
                 <div class="img-wrapper">
                   <img src="public/images/venue-image.png" alt="">
@@ -434,7 +462,7 @@
               </li>
             </ul>
             <div class="eg-pager">
-              <span class="hide-xs">Showing <strong>1-10</strong> of 626 venues</span>
+              <span class="hide-xs">Showing <strong>1-12</strong> of 626 venues</span>
               <ul class="list-unstyled">
                 <li class="active"><a href="">1</a></li>
                 <li><a href="">2</a></li>

@@ -1083,6 +1083,10 @@ Tiles Styles
   p {
     line-height: 21px;
     font-size: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .meta-data {
@@ -1884,18 +1888,19 @@ Controller Styles
             li {
               float: left;
 
-              a {
+              span {
                 display: block;
                 width: 29px;
                 height: 29px;
                 background: url("../images/controls.png") no-repeat 0 0;
                 text-indent: -9999px;
+                cursor: pointer;
               }
 
               &:nth-child(1) {
                 margin-right: 8px;
 
-                a {
+                span {
                   background-position: 0 0;
 
                   &:hover {
@@ -1904,14 +1909,14 @@ Controller Styles
                 }
 
                 &.active {
-                  a {
+                  span {
                     background-position: 0 -29px;
                   }
                 }
               }
 
               &:nth-child(2) {
-                a {
+                span {
                   background-position: 0 -58px;
 
                   &:hover {
@@ -1920,7 +1925,7 @@ Controller Styles
                 }
 
                 &.active {
-                  a {
+                  span {
                     background-position: 0 -87px;
                   }
                 }
@@ -2218,6 +2223,51 @@ Venues Styles
         @media @xs {
           text-align: left;
           padding-top: 17px;
+        }
+      }
+
+      &.square {
+        margin-right: 30px;
+        width: 262px;
+        float: left;
+        height: auto;
+
+        @media @medium {
+          width: 212px;
+        }
+
+        @media @small {
+          width: 220px;
+        }
+
+        @media @xs {
+          width: 100%;
+          margin-right: 0;
+          float: none;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        .img-wrapper {
+          width: 100%;
+          float: none;
+        }
+
+        .text-wrapper {
+          float: none;
+          height: auto;
+          padding: 18px 18px 5px 18px;
+          width: 100%;
+
+          @media @xs {
+            padding: 17px 25px;
+          }
+
+          .meta-data {
+            margin-top: 13px;
+          }
         }
       }
     }
