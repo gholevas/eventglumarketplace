@@ -219,3 +219,32 @@ myapp.directive('switchGrid', [function() {
     }
   };
 }]);
+
+myapp.directive('enableSwap', [function() {
+  return {
+    restrict: 'EA',
+
+    link: function(scope, element, attrs) {
+      var $panes = element.find('.tab-pane');
+      var $tabList = element.find('>ul');
+
+      $panes.swiperight(function() {
+        var index = $(this).attr('data-index') * 1;
+        
+        if (index == 1)
+          element.find('ul a[data-index="' + $panes.length + '"]').tab('show');
+        else
+          element.find('ul a[data-index="' + (index - 1) + '"]').tab('show');
+      });
+
+      $panes.swipeleft(function() {
+        var index = $(this).attr('data-index') * 1;
+
+        if (index == $panes.length)
+          element.find('ul a[data-index="1"]').tab('show');
+        else
+          element.find('ul a[data-index="' + (index + 1) + '"]').tab('show');
+      });
+    }
+  };
+}]);

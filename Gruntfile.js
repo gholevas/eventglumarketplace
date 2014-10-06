@@ -31,6 +31,7 @@ module.exports = function(grunt) {
         'bower_components/jquery-ui/ui/widget.js',
         'bower_components/jquery-ui/ui/mouse.js',
         'public/js/lib/jquery.ui.touch-punch.min.js',
+        'public/js/lib/jquery.mobile.custom.min.js',
         'public/js/app.js',
         'public/js/directives.js'
         ],
