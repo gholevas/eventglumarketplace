@@ -189,3 +189,25 @@ myapp.directive('resetTab', [function() {
     }
   };
 }]);
+
+myapp.directive('switchGrid', [function() {
+  return {
+    restrict: 'EA',
+
+    scope: {
+      grid: '@'
+    },
+
+    link: function(scope, element, attrs) {
+      var $tiles = $('li.tile');
+      
+      element.on('click', function() {
+        $('.grids li').removeClass('active');
+        $(this).parent().addClass('active');
+
+        if (scope.grid == 'square') $tiles.addClass('square');
+        else $tiles.removeClass('square');
+      });
+    }
+  };
+}]);
