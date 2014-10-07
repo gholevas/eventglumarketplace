@@ -39,6 +39,7 @@ myapp.directive('widgetTrigger', [function() {
     restrict: 'EA',
 
     link: function(scope, element, attrs) {
+      console.log(element);
       element.on('click', function() {
         element.parent().siblings().find('.widget-trigger').addClass('collapsed');
         var $el = $(element.attr('data-target'));
@@ -162,6 +163,7 @@ myapp.directive('checkItem', [function() {
     link: function(scope, element, attrs) {
       var $radios = element.find('input[type="radio"]');
       var $lis = element.find('li');
+      var $checkboxes = element.find('input[type="checkbox"]');
 
       angular.forEach($radios, function (radio, i) {
         var rd = $(radio);
@@ -177,6 +179,15 @@ myapp.directive('checkItem', [function() {
           $item.addClass('active');
         else 
           $item.removeClass('active');
+      });
+
+      $checkboxes.on('change', function() {
+        var $li = $(this).parent().parent();
+
+        if ($(this).is(':checked')) 
+          $li.addClass('active');
+        else 
+          $li.removeClass('active');
       });
     }
   };

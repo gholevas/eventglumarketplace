@@ -484,14 +484,14 @@ Main Menu Styles
     text-align: center;
 
     li {
-      display: inline-block;
+      float: left;
 
       a {
         color: #000;
         display: block;
         height: 47px;
         line-height: 47px;
-        padding: 0 30px;
+        padding: 0 34px;
         text-align: center;
         text-transform: uppercase;
 
@@ -499,7 +499,9 @@ Main Menu Styles
           color: @green-1;
         }
 
-        @media @medium { padding: 0 18px; }
+        @media @medium { 
+          padding: 0 21px; 
+        }
       }
 
       &.active a {
@@ -509,10 +511,6 @@ Main Menu Styles
         &:hover {
           text-decoration: none;
         }
-      }
-
-      &:first-child {
-        float: left;
       }
 
       &:last-child {
@@ -3208,6 +3206,13 @@ Customize Options Styles
   }
 
   #options {
+    margin: 0;
+
+    .panel {
+      box-shadow: none;
+      border: none;
+    }
+    
     .options-trigger {
       background: url("../images/arrow-6.png") no-repeat 0 center;
       font-family: 'proxima_novasemibold';
